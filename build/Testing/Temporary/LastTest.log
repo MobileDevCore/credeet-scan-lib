@@ -1,0 +1,93 @@
+Start testing: Sep 26 23:10 Pacific Daylight Time
+----------------------------------------------------------
+1/6 Testing: similarity
+1/6 Test: similarity
+Command: "C:/Users/DEEP/Desktop/Scanmatch/build/test_similarity.exe"
+Directory: C:/Users/DEEP/Desktop/Scanmatch/build
+"similarity" start time: Sep 26 23:10 Pacific Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"similarity" end time: Sep 26 23:10 Pacific Daylight Time
+"similarity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: parser
+2/6 Test: parser
+Command: "C:/Users/DEEP/Desktop/Scanmatch/build/test_parser.exe"
+Directory: C:/Users/DEEP/Desktop/Scanmatch/build
+"parser" start time: Sep 26 23:10 Pacific Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"parser" end time: Sep 26 23:10 Pacific Daylight Time
+"parser" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: ffi
+3/6 Test: ffi
+Command: "C:/Users/DEEP/Desktop/Scanmatch/build/test_ffi.exe"
+Directory: C:/Users/DEEP/Desktop/Scanmatch/build
+"ffi" start time: Sep 26 23:10 Pacific Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"ffi" end time: Sep 26 23:10 Pacific Daylight Time
+"ffi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: matching
+4/6 Test: matching
+Command: "C:/Users/DEEP/Desktop/Scanmatch/build/test_matching.exe"
+Directory: C:/Users/DEEP/Desktop/Scanmatch/build
+"matching" start time: Sep 26 23:10 Pacific Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"matching" end time: Sep 26 23:10 Pacific Daylight Time
+"matching" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: gujarati
+5/6 Test: gujarati
+Command: "C:/Users/DEEP/Desktop/Scanmatch/build/test_gujarati.exe"
+Directory: C:/Users/DEEP/Desktop/Scanmatch/build
+"gujarati" start time: Sep 26 23:10 Pacific Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"gujarati" end time: Sep 26 23:10 Pacific Daylight Time
+"gujarati" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: catalog_gujarati
+6/6 Test: catalog_gujarati
+Command: "C:/Users/DEEP/Desktop/Scanmatch/build/test_catalog_gujarati.exe"
+Directory: C:/Users/DEEP/Desktop/Scanmatch/build
+"catalog_gujarati" start time: Sep 26 23:10 Pacific Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"catalog_gujarati" end time: Sep 26 23:10 Pacific Daylight Time
+"catalog_gujarati" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 26 23:10 Pacific Daylight Time

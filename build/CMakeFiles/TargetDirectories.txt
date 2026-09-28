@@ -1,0 +1,11 @@
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/scanmatch.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/scanmatch_cli.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test_similarity.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test_parser.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test_ffi.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test_matching.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test_gujarati.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test_catalog_gujarati.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/test.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/edit_cache.dir
+C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/rebuild_cache.dir

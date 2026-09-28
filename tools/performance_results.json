@@ -1,0 +1,52 @@
+[
+  {
+    "label": "Single-line English ('Sugar 2 kg')",
+    "image": "images/eng_sugar_2kg.png",
+    "ocr_time_ms": 1095,
+    "matching_time_ms": 1,
+    "parse_and_ffi_overhead_ms": 0.0,
+    "total_engine_ms": 1096,
+    "wall_clock_ms": 1104.4,
+    "items_detected": 1
+  },
+  {
+    "label": "Single-line Mixed ('\u0a9a\u0acb\u0a96\u0abe 5 kg')",
+    "image": "images/mix_rice_5kg.png",
+    "ocr_time_ms": 174,
+    "matching_time_ms": 1,
+    "parse_and_ffi_overhead_ms": 0.0,
+    "total_engine_ms": 175,
+    "wall_clock_ms": 176.1,
+    "items_detected": 1
+  },
+  {
+    "label": "Single-line Mixed ('Soap 4 pcs')",
+    "image": "images/mix_soap_4pcs.png",
+    "ocr_time_ms": 203,
+    "matching_time_ms": 0,
+    "parse_and_ffi_overhead_ms": 0.0,
+    "total_engine_ms": 203,
+    "wall_clock_ms": 207.57,
+    "items_detected": 1
+  },
+  {
+    "label": "Single-line Gujarati ('\u0ab8\u0abe\u0aac\u0ac1 4 \u0aa8\u0a82\u0a97')",
+    "image": "images/guj_soap_ascii_4pcs.png",
+    "ocr_time_ms": 104,
+    "matching_time_ms": 1,
+    "parse_and_ffi_overhead_ms": 0.0,
+    "total_engine_ms": 105,
+    "wall_clock_ms": 105.28,
+    "items_detected": 1
+  },
+  {
+    "label": "5-Item Multi-line Gujarati list",
+    "image": "images/multiline_shopping_list.png",
+    "ocr_time_ms": 266,
+    "matching_time_ms": 2,
+    "parse_and_ffi_overhead_ms": 0.0,
+    "total_engine_ms": 268,
+    "wall_clock_ms": 270.76,
+    "items_detected": 5
+  }
+]

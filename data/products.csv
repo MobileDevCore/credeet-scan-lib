@@ -1,0 +1,12 @@
+product_id,canonical_name,brand,category,aliases_en,aliases_gu,aliases_hi,common_ocr_errors,units,pack_sizes
+RICE001,Rice,,grains,rice|basmati rice,chokha|ચોખા|ચોખ|ચોકા,चावल|चावल,rlce|rce|choka,kg|g,1kg|2kg|5kg|10kg
+WHEAT001,Wheat,,grains,wheat,ઘઉં|ઘઉં,गेहूं|गेहूँ,wh3at|wheat,kg|g,1kg|5kg|10kg
+ALMOND001,Almonds,,dry-fruits,almond|almonds|badam,બદામ|બદામા,बादाम|बादाम,alm0nd|badam,kg|g,100g|250g|500g|1kg
+SOAP001,Soap,,personal-care,soap,સાબુ|સાબૂ,साबुन|साबू,s0ap|so ap|sop,piece|packet,1|2|4
+SHAMPOO001,Shampoo,,personal-care,shampoo,શેમ્પૂ|શેમ્પુ,शैम्पू|शैम्पु,shamp00|shamp0o,bottle|ml,100ml|180ml|340ml
+CLINICPLUS001,Clinic Plus Shampoo,Clinic Plus,personal-care,clinic plus|clinic plus shampoo,ક્લિનિક પ્લસ|ક્લિનિક પ્લસ શેમ્પૂ,क्लिनिक प्लस|क्लिनिक प्लस शैम्पू,clnck pls|clinc plus,bottle|ml,100ml|175ml|340ml
+PARLEG001,Parle-G Biscuit,Parle-G,food,parle g|parleg|parle-g,પાર્લે જી|પારલે જી,पार्ले जी|पार्ले-जी,parle 6|parle g,packet|pack|piece,50g|100g|250g
+LUX001,Lux Soap,Lux,personal-care,lux soap|lux,લક્સ સાબુ|લક્સ,लक्स साबुन|लक्स,lux sop|luks,piece|packet,1|4
+SUGAR001,Sugar,,staples,sugar,ખાંડ|ખાંડ,चीनी|शक्कर,suqar|sug ar,kg|g,1kg|2kg|5kg
+MILK001,Milk,,dairy,milk,દૂધ|દુધ,दूध|दुध,milk|mi1k,liter|ml,500ml|1l|2l
+TEA001,Tea,,beverages,tea|chai,ચા|ચાહ,चाय|चाह,te a|t3a,kg|g|packet,100g|250g|500g

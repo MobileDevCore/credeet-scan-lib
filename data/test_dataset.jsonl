@@ -1,0 +1,10 @@
+{"id":"GUJ001","language":"guj","text":"ચોખા ૫ કિલો","product_id":"RICE001","product":"Rice","quantity":5,"unit":"kg","type":"printed"}
+{"id":"GUJ002","language":"guj","text":"ચોખા પ કિલો","product_id":"RICE001","product":"Rice","quantity":5,"unit":"kg","type":"ocr_confusion"}
+{"id":"GUJ003","language":"guj","text":"ચોખા ૨૫ કિલોગ્રામ","product_id":"RICE001","product":"Rice","quantity":25,"unit":"kg","type":"printed"}
+{"id":"GUJ004","language":"guj","text":"ખાંડ ૫૦૦ ગ્રામ","product_id":"SUGAR001","product":"Sugar","quantity":500,"unit":"g","type":"printed"}
+{"id":"GUJ005","language":"guj","text":"દૂધ ૧ લિટર","product_id":"MILK001","product":"Milk","quantity":1,"unit":"liter","type":"printed"}
+{"id":"GUJ006","language":"guj","text":"સાબુ ૪ નંગ","product_id":"SOAP001","product":"Soap","quantity":4,"unit":"piece","type":"printed"}
+{"id":"GUJ007","language":"guj","text":"ચા ૫૦૦ g","product_id":"TEA001","product":"Tea","quantity":500,"unit":"g","type":"mixed"}
+{"id":"MIX001","language":"mixed","text":"ચોખા 5 kg","product_id":"RICE001","product":"Rice","quantity":5,"unit":"kg","type":"mixed"}
+{"id":"MIX002","language":"mixed","text":"દૂધ 2 litre","product_id":"MILK001","product":"Milk","quantity":2,"unit":"liter","type":"mixed"}
+{"id":"MIX003","language":"mixed","text":"Soap 4 pcs","product_id":"SOAP001","product":"Soap","quantity":4,"unit":"piece","type":"mixed"}

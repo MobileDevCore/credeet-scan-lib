@@ -1,0 +1,25 @@
+# ninja log v7
+26	533	8121926003018891	CMakeFiles/scanmatch.dir/src/embedding.c.obj	cdb4a43d6559abc5
+15	574	8121926002917048	CMakeFiles/scanmatch.dir/src/text.c.obj	ad13c7fd2725b64c
+41	505	8121926003171292	CMakeFiles/test_parser.dir/tests/test_parser.c.obj	1752c3973dfc00cd
+36	530	8121926003122064	CMakeFiles/test_similarity.dir/tests/test_similarity.c.obj	76ba7e27eb59b67a
+32	599	8121926003088700	CMakeFiles/scanmatch_cli.dir/cli/scanmatch_cli.c.obj	fb8250e129680d3b
+29	633	8121926003048808	CMakeFiles/scanmatch.dir/src/ffi.c.obj	adbc3a131c7a4279
+23	654	8121926002989060	CMakeFiles/scanmatch.dir/src/preprocess.c.obj	573c2613caa781
+12	677	8121926002887114	CMakeFiles/scanmatch.dir/src/scanmatch.c.obj	b63e17c4cfd75ffb
+17	631	8121926002936998	CMakeFiles/scanmatch.dir/src/parser.c.obj	fd8d359ec2667658
+20	715	8121926002966880	CMakeFiles/scanmatch.dir/src/ocr.c.obj	3c712ea26860a945
+506	696	8121926007825284	CMakeFiles/test_ffi.dir/tests/test_ffi.c.obj	350c67d30b755c6f
+530	736	8121926008066683	CMakeFiles/test_matching.dir/tests/test_matching.c.obj	7f9b3b92db7522b1
+533	752	8121926008096605	CMakeFiles/test_gujarati.dir/tests/test_gujarati.c.obj	854ec6ba49f2e764
+574	766	8121926008507489	CMakeFiles/test_catalog_gujarati.dir/tests/test_catalog_gujarati.c.obj	92de8861f8e3d815
+715	1210	8121926014628403	scanmatch.dll	45f27f06127d47a4
+715	1210	8121926014628403	libscanmatch.dll.a	45f27f06127d47a4
+1210	1491	8121926014871569	scanmatch_cli.exe	5b0760aae21439f6
+1216	1505	8121926014923391	test_parser.exe	4ff81af6a201a67b
+1213	1490	8121926014898622	test_similarity.exe	ae7f86e6b5f355c3
+1224	1509	8121926015002976	test_gujarati.exe	80910baea2be5c57
+1218	1499	8121926014952910	test_ffi.exe	425445c5846f2e19
+1221	1514	8121926014975103	test_matching.exe	2e14a63c3b5d87dd
+1226	1495	8121926015025223	test_catalog_gujarati.exe	d401e442c82db402
+6	36	8121926002319967	clean	6f161f6d6011d83
