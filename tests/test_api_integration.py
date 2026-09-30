@@ -7,6 +7,8 @@ from server.app import app
 
 client = TestClient(app)
 
+DUMMY_JPEG = b"\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x01\x00\x60\x00\x60\x00\x00\xFF\xDB\x00C\x00"
+
 def test_health():
     res = client.get("/health")
     assert res.status_code == 200
@@ -15,6 +17,8 @@ def test_health():
     assert data["ok"] is True
     assert data["version"] == "0.11.0"
     assert data["catalog"] == "loaded"
+    assert data["ocr_engine"] == "mock"
+    assert data["cloud_vision_configured"] is False
 
 def test_match_english():
     res = client.post("/api/v1/match", json={"ocr_text": "Rice 2 kg"})
@@ -28,13 +32,13 @@ def test_match_english():
     assert item["status"] == "confirmed"
 
 def test_match_gujarati():
-    res = client.post("/api/v1/match", json={"ocr_text": "ચોખા ૨ કિલો"})
+    res = client.post("/api/v1/match", json={"ocr_text": "ચોખા ૫ કિલો"})
     assert res.status_code == 200
     data = res.json()
     assert data["success"] is True
     item = data["items"][0]
     assert item["product_id"] == "RICE001"
-    assert item["quantity"] == 2.0
+    assert item["quantity"] == 5.0
     assert item["unit"] == "kg"
     assert item["status"] == "confirmed"
 
@@ -60,8 +64,20 @@ def test_match_hindi():
     assert item["unit"] == "kg"
     assert item["status"] == "confirmed"
 
+def test_match_multiple_items():
+    multiline = "ચોખા ૫ કિલો\nદૂધ ૧ લિટર\nસાબુ ૪ નંગ\nRice 2 kg"
+    res = client.post("/api/v1/match", json={"ocr_text": multiline})
+    assert res.status_code == 200
+    data = res.json()
+    assert data["success"] is True
+    assert len(data["items"]) == 4
+    assert data["items"][0]["product_id"] == "RICE001"
+    assert data["items"][1]["product_id"] == "MILK001"
+    assert data["items"][2]["product_id"] == "SOAP001"
+    assert data["items"][3]["product_id"] == "RICE001"
+
 def test_match_missing_quantity():
-    # Must NOT invent quantity!
+    # Conservative policy: Do NOT invent quantity!
     res = client.post("/api/v1/match", json={"ocr_text": "ચોખા"})
     assert res.status_code == 200
     data = res.json()
@@ -74,7 +90,7 @@ def test_match_missing_quantity():
     assert item["has_unit"] is False
 
 def test_match_missing_unit():
-    # Must NOT invent unit!
+    # Conservative policy: Do NOT invent unit!
     res = client.post("/api/v1/match", json={"ocr_text": "ચોખા ૨"})
     assert res.status_code == 200
     data = res.json()
@@ -87,7 +103,7 @@ def test_match_missing_unit():
     assert item["has_unit"] is False
 
 def test_match_unknown_product():
-    res = client.post("/api/v1/match", json={"ocr_text": "NonExistentThing 5 kg"})
+    res = client.post("/api/v1/match", json={"ocr_text": "XYZUnknownProduct 10 pcs"})
     assert res.status_code == 200
     data = res.json()
     assert data["success"] is True
@@ -95,48 +111,66 @@ def test_match_unknown_product():
     assert item["product_id"] is None
     assert item["status"] == "unidentified"
     assert item["needs_confirmation"] is True
+    assert item["reason"] == "insufficient_confidence"
 
-def test_match_no_ocr_text():
+def test_match_empty_ocr_result():
     res = client.post("/api/v1/match", json={"ocr_text": "   \n  \t  "})
     assert res.status_code == 200
     data = res.json()
     assert data["success"] is False
     assert data["error"]["code"] == "NO_TEXT_DETECTED"
 
-def test_scan_image_mock():
-    # Test uploading image bytes to /api/v1/scan
-    dummy_image = b"\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x01\x00\x60\x00\x60\x00\x00\xFF\xDB\x00C\x00"
+def test_scan_image_mock_deterministic():
+    # Filename mapped deterministically in MockOCR
     res = client.post(
         "/api/v1/scan",
-        files={"file": ("rice_list.jpg", dummy_image, "image/jpeg")}
+        files={"file": ("rice_test.jpg", DUMMY_JPEG, "image/jpeg")}
     )
     assert res.status_code == 200
     data = res.json()
     assert data["success"] is True
-    assert data["ocr_backend"] == "mock"
-    assert len(data["items"]) > 0
+    assert data["ocr_engine"] == "mock"
     assert data["items"][0]["product_id"] == "RICE001"
 
-def test_scan_image_with_custom_mock_text():
-    # Pass explicit mock text override
-    dummy_image = b"\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x01\x00\x60\x00\x60\x00\x00\xFF\xDB\x00C\x00"
+def test_scan_image_gujarati_fixture():
     res = client.post(
         "/api/v1/scan",
-        files={"file": ("scan.jpg", dummy_image, "image/jpeg")},
-        data={"mock_ocr_text": "દૂધ ૨ લિટર\nસાબુ ૪ નંગ"}
+        files={"file": ("chokha_5kg.jpg", DUMMY_JPEG, "image/jpeg")}
     )
     assert res.status_code == 200
     data = res.json()
     assert data["success"] is True
-    assert len(data["items"]) == 2
-    assert data["items"][0]["product_id"] == "MILK001"
-    assert data["items"][0]["quantity"] == 2.0
-    assert data["items"][0]["unit"] == "liter"
-    assert data["items"][1]["product_id"] == "SOAP001"
-    assert data["items"][1]["quantity"] == 4.0
-    assert data["items"][1]["unit"] == "piece"
+    assert data["items"][0]["product_id"] == "RICE001"
+    assert data["items"][0]["quantity"] == 5.0
 
-def test_scan_empty_image():
+def test_scan_image_empty_ocr():
+    res = client.post(
+        "/api/v1/scan",
+        files={"file": ("empty_scan.jpg", DUMMY_JPEG, "image/jpeg")}
+    )
+    assert res.status_code == 200
+    data = res.json()
+    assert data["success"] is False
+    assert data["error"]["code"] == "NO_TEXT_DETECTED"
+
+def test_scan_image_ocr_failure():
+    # Simulates OCR service returning failure
+    res = client.post(
+        "/api/v1/scan",
+        files={"file": ("fail_ocr.jpg", DUMMY_JPEG, "image/jpeg")}
+    )
+    assert res.status_code == 502
+    assert res.json()["detail"]["error"]["code"] == "OCR_FAILED"
+
+def test_scan_invalid_image_type():
+    res = client.post(
+        "/api/v1/scan",
+        files={"file": ("test.txt", b"plain text content", "text/plain")}
+    )
+    assert res.status_code == 400
+    assert res.json()["detail"]["error"]["code"] == "UNSUPPORTED_FORMAT"
+
+def test_scan_empty_image_file():
     res = client.post(
         "/api/v1/scan",
         files={"file": ("empty.jpg", b"", "image/jpeg")}
@@ -150,11 +184,15 @@ if __name__ == "__main__":
     test_match_gujarati()
     test_match_mixed()
     test_match_hindi()
+    test_match_multiple_items()
     test_match_missing_quantity()
     test_match_missing_unit()
     test_match_unknown_product()
-    test_match_no_ocr_text()
-    test_scan_image_mock()
-    test_scan_image_with_custom_mock_text()
-    test_scan_empty_image()
-    print("ALL PYTHON FASTAPI INTEGRATION TESTS PASSED SUCCESSFULLY!")
+    test_match_empty_ocr_result()
+    test_scan_image_mock_deterministic()
+    test_scan_image_gujarati_fixture()
+    test_scan_image_empty_ocr()
+    test_scan_image_ocr_failure()
+    test_scan_invalid_image_type()
+    test_scan_empty_image_file()
+    print("ALL 16 INTEGRATION TEST SCENARIOS PASSED SUCCESSFULLY!")

@@ -4,16 +4,17 @@ ScanMatch C is an ultra-lightweight (58 KB), high-performance C shared library (
 
 ## Target Architecture
 
+### Current Flow (Active in Phase 6 — 100% Offline):
 ```text
 User image
     ↓
 Python FastAPI (server/app.py)
     ↓
-Google Cloud Vision OCR (server/ocr_service.py) [or local mock mode]
-    ↓  (Raw OCR text & symbol confidences)
+Mock/Local OCR (server/ocr_service.py) [Deterministic, zero network calls]
+    ↓  (Extracted text & confidence)
 Python FFI (python/scanmatch_ctypes.py)
     ↓  (In-memory string pointer)
-libscanmatch.so: sm_process_text_json
+libscanmatch: sm_process_text_json
     ├─ 1. Gujarati / Devanagari numeral normalization (૦-૯, ०-९ → 0-9)
     ├─ 2. Multi-lingual script detection & Unicode normalization
     ├─ 3. Strict Quantity & Unit extraction (no invented values)
@@ -23,6 +24,16 @@ libscanmatch.so: sm_process_text_json
     ↓
 FastAPI returns structured JSON response to client
 ```
+
+### Future Flow (Cloud Vision Replacement):
+```text
+FastAPI → Google Cloud Vision (server/ocr_service.py) → Python FFI → libscanmatch → JSON
+```
+
+> **IMPORTANT NOTICE:**
+> - **Google Cloud Vision is NOT configured yet.**
+> - **No Google account, credentials, API keys, or billing are required for local/mock testing.**
+> - The application operates 100% offline with zero cloud dependencies.
 
 ## Key Principles & Guarantees
 

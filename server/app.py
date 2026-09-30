@@ -1,16 +1,15 @@
-
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from pydantic import BaseModel
 from pathlib import Path
 from typing import Optional
 import os, time, uuid, logging, threading
 from python.scanmatch_ctypes import ScanMatch
-from server.ocr_service import OCRService
+from server.ocr_service import get_ocr_engine
 
 app = FastAPI(
     title="ScanMatch REST API",
     version="0.11.0",
-    description="FastAPI service for Gujarati/Hindi/English shopping-list OCR and product matching powered by libscanmatch.so"
+    description="FastAPI service for Gujarati/Hindi/English shopping-list OCR and product matching powered by libscanmatch"
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +22,7 @@ log = logging.getLogger("scanmatch")
 
 _engine = None
 _lock = threading.Lock()
-_ocr_service = OCRService()
+_ocr_engine = get_ocr_engine()
 
 def get_engine():
     global _engine
@@ -55,7 +54,8 @@ def health():
         "ok": True,
         "version": "0.11.0",
         "catalog": "loaded" if engine else "error",
-        "ocr_backend": _ocr_service.backend
+        "ocr_engine": _ocr_engine.name,
+        "cloud_vision_configured": False
     }
 
 @app.post("/api/v1/match")
@@ -81,8 +81,8 @@ async def scan(
 ):
     """Primary endpoint for shopping-list images.
     
-    1. Extracts text from image using OCRService (Google Cloud Vision or local mock).
-    2. Passes extracted text to libscanmatch.so via Python FFI.
+    1. Extracts text from image using the active OCR interface (MockOCR locally).
+    2. Passes extracted text to libscanmatch C library via Python FFI.
     3. Normalizes Gujarati/Hindi/English, parses quantities/units, and matches products.
     """
     rid = "REQ-" + uuid.uuid4().hex[:12]
@@ -94,7 +94,7 @@ async def scan(
         with _lock:
             result = engine.process_text(text)
         result["request_id"] = rid
-        result["ocr_backend"] = "direct_text"
+        result["ocr_engine"] = "direct_text"
         result["server_time_ms"] = round((time.perf_counter() - t0) * 1000, 2)
         return result
 
@@ -125,13 +125,13 @@ async def scan(
             "error": {"code": "IMAGE_TOO_LARGE", "message": "Image exceeds maximum allowed size (10 MB)."}
         })
 
-    # Step 1: OCR Extraction Layer (Python)
+    # Step 1: OCR Extraction Layer via OCR Interface
     t_ocr_start = time.perf_counter()
     try:
-        ocr_text, ocr_conf = _ocr_service.extract_text(
+        ocr_result = _ocr_engine.extract_text(
             data,
             filename=file.filename,
-            mock_override_text=mock_ocr_text
+            mock_override=mock_ocr_text
         )
     except Exception as e:
         log.exception(f"OCR error for request {rid}: {e}")
@@ -141,7 +141,13 @@ async def scan(
         })
     ocr_time_ms = round((time.perf_counter() - t_ocr_start) * 1000, 2)
 
-    if not ocr_text or not ocr_text.strip():
+    if ocr_result.error:
+        raise HTTPException(status_code=502, detail={
+            "success": False,
+            "error": {"code": "OCR_FAILED", "message": f"OCR failure: {ocr_result.error}"}
+        })
+
+    if not ocr_result.text or not ocr_result.text.strip():
         return {
             "success": False,
             "request_id": rid,
@@ -149,20 +155,20 @@ async def scan(
                 "code": "NO_TEXT_DETECTED",
                 "message": "No readable text was detected in the image."
             },
-            "ocr_backend": _ocr_service.backend,
+            "ocr_engine": _ocr_engine.name,
             "ocr_time_ms": ocr_time_ms,
             "server_time_ms": round((time.perf_counter() - t0) * 1000, 2),
             "items": []
         }
 
-    # Step 2: C Product Processing & Matching Layer (libscanmatch.so)
+    # Step 2: C Product Processing & Matching Layer (libscanmatch)
     engine = get_engine()
     with _lock:
-        result = engine.process_text(ocr_text)
+        result = engine.process_text(ocr_result.text)
 
     result["request_id"] = rid
-    result["ocr_backend"] = _ocr_service.backend
-    result["ocr_confidence"] = ocr_conf
+    result["ocr_engine"] = _ocr_engine.name
+    result["ocr_confidence"] = ocr_result.confidence
     result["ocr_time_ms"] = ocr_time_ms
     result["server_time_ms"] = round((time.perf_counter() - t0) * 1000, 2)
 
