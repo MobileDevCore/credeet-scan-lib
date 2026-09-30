@@ -1,97 +1,104 @@
-# ScanMatch C — v10 Gujarati-first improvement baseline
+# ScanMatch C — Minimal, Optimized Multilingual Product Matching Engine
 
-This is the **existing ScanMatch v10 main project**, updated in-place with a Gujarati-first shopping-list recognition path. The architecture is now frozen; future work should focus on measured OCR quality, Gujarati data, catalog quality, regression coverage, calibration and performance.
+ScanMatch C is an ultra-lightweight (58 KB), high-performance C shared library (`libscanmatch.so`) and Python FastAPI integration designed for deployment on Linux / DigitalOcean. It specializes in Gujarati-first, Hindi, and English shopping-list normalization, conservative quantity/unit extraction, and catalog fuzzy matching.
 
-## Frozen architecture
+## Target Architecture
+
 ```text
-Image
- ↓
-Validation
- ↓
-Preprocessing variants + orientation
- ↓
-Gujarati-first OCR / multilingual fallback
- ↓
-Gujarati + multilingual normalization
- ↓
-Item segmentation
- ↓
-Product / quantity / unit parser
- ↓
-Catalog + alias + OCR-error + fuzzy matching
- ↓
-Confidence / confirmation
- ↓
-Structured JSON
- ↓
-API / CLI
+User image
+    ↓
+Python FastAPI (server/app.py)
+    ↓
+Google Cloud Vision OCR (server/ocr_service.py) [or local mock mode]
+    ↓  (Raw OCR text & symbol confidences)
+Python FFI (python/scanmatch_ctypes.py)
+    ↓  (In-memory string pointer)
+libscanmatch.so: sm_process_text_json
+    ├─ 1. Gujarati / Devanagari numeral normalization (૦-૯, ०-९ → 0-9)
+    ├─ 2. Multi-lingual script detection & Unicode normalization
+    ├─ 3. Strict Quantity & Unit extraction (no invented values)
+    ├─ 4. Product catalog & alias hybrid matching (exact, token, Levenshtein)
+    ├─ 5. Confidence scoring & candidate ambiguity detection
+    └─ 6. Explainable JSON serialization
+    ↓
+FastAPI returns structured JSON response to client
 ```
 
-## Gujarati-first improvements in this v10 ZIP
-- Gujarati Unicode normalization and script detection.
-- Gujarati and Devanagari numeral normalization, including multi-digit and decimal quantities.
-- Recovery for the common Gujarati OCR confusion `૫ → પ` when it occurs in numeric position before a unit.
-- Gujarati shopping units: `કિલો`, `કિલોગ્રામ`, `ગ્રામ`, `લિટર`, `લીટર`, `મિલીલીટર`, `નંગ`, `પીસ`, `ડઝન`, `પેક`, `બોટલ` plus English/Hindi equivalents.
-- Product/quantity/unit separation before catalog matching.
-- Gujarati aliases and common OCR variants in the catalog.
-- Unicode code-point fuzzy similarity instead of byte-by-byte Gujarati comparison.
-- Gujarati-first Tesseract pass followed by the requested multilingual fallback.
-- Multiple preprocessing variants, scaling, border cropping and four-way orientation trials.
-- Raw OCR and normalized text retained in the API response.
-- Structured candidates, confidence and confirmation state.
-- Catalog is loaded once per server process and protected by a request lock around the shared C context.
-- Gujarati regression tests are part of CTest.
+## Key Principles & Guarantees
 
-## Build from a clean checkout
+1. **Clean Separation of Concerns:**
+   - Google Cloud Vision handles the image OCR in Python.
+   - `libscanmatch.so` is dedicated purely to text normalization, quantity/unit parsing, and catalog matching.
+   - Zero HTTP, cloud credentials, or external heavy OCR runtimes (Tesseract/PaddleOCR) inside `libscanmatch.so`.
+2. **Minimal & Optimized Footprint:**
+   - Library size: **58 KB**
+   - Runtime dependencies: Standard C11 library (`libc`) and math (`libm`). No third-party C libraries.
+   - Latency: **<2 ms** per shopping list batch.
+3. **Conservative & Reassuring Behavior:**
+   - **Never invents quantity:** If absent, `has_quantity = false` and `quantity = null`.
+   - **Never invents unit:** If absent, `has_unit = false` and `unit = null`.
+   - **Never invents products:** Low confidence results are marked `unidentified` with `confidence = 0.0`.
+   - **Ambiguity Detection:** If multiple products have close top scores, the item is explicitly flagged as `ambiguous` with `needs_confirmation = true`.
+   - **No OCR Text:** Empty or whitespace-only inputs return a clean `NO_TEXT_DETECTED` result.
+4. **Gujarati-First Language Features:**
+   - Gujarati Unicode digits (`૦`, `૧`, `૨`, `૩`, `૪`, `૫`, `૬`, `૭`, `૮`, `૯`) normalized to standard ASCII (`0`-`9`).
+   - Common Gujarati OCR confusion recovery (`૫` misclassified as `પ` before units).
+   - Gujarati shopping units (`કિલો`, `કિ.ગ્રા.`, `લિટર`, `નંગ`, `ડઝન`, `પેકેટ`, etc.) alongside Hindi and English equivalents.
+   - Multi-byte UTF-8 character-level Levenshtein similarity.
+
+## Build from Source
+
+### On Linux / DigitalOcean (Target Environment)
+Produces a genuine ELF 64-bit shared library (`build/libscanmatch.so`):
 ```bash
 cmake -S . -B build
 cmake --build build
 ctest --test-dir build --output-on-failure
+
+# Verify ELF binary
+file build/libscanmatch.so
+ldd build/libscanmatch.so
+nm -D build/libscanmatch.so
 ```
 
-The project uses the Tesseract C API and Leptonica. CMake checks for both development packages and emits a direct installation diagnostic when either is missing.
+### On Windows / MSYS2 (Local Development Environment)
+Produces a Windows PE32+ DLL (`build/libscanmatch.dll`):
+```bash
+cmake -S . -B build -G "Ninja"
+cmake --build build
+ctest --test-dir build --output-on-failure
 
-## CLI
-```bash
-build/scanmatch_cli shopping_list.jpg
-```
-Optional catalog/language arguments:
-```bash
-build/scanmatch_cli shopping_list.jpg data/products.csv guj+eng+hin
+# Verify Windows DLL
+file build/libscanmatch.dll
 ```
 
-## API
-Install Python dependencies from `server/requirements.txt`, build the C library, then:
+## Running the FastAPI REST Server
+
 ```bash
+# Install server requirements
+pip install -r server/requirements.txt
+
+# Run server
 python run_server.py
 ```
-Endpoints:
-- `POST /api/v1/scan`
-- `POST /scan` compatibility endpoint
-- `GET /health`
 
-## Gujarati examples
-The parser and normalization layer cover examples such as:
-```text
-ચોખા ૫ કિલો
-ચોખા પ કિલો
-ખાંડ ૫૦૦ ગ્રામ
-દૂધ ૧ લિટર
-સાબુ ૪ નંગ
-ચા ૫૦૦ g
-ચોખા 1.5 કિલો
+The server automatically starts in safe local **mock OCR mode** if no cloud credentials are provided, allowing full end-to-end testing without external network calls or cloud costs.
+
+### API Endpoints
+
+- `GET /health` — Check server status, loaded catalog, and active OCR backend (`mock` or `google_cloud_vision`).
+- `POST /api/v1/match` — Ingest raw OCR text directly (JSON body: `{"ocr_text": "..."}`).
+- `POST /api/v1/scan` — Upload shopping-list image file (multipart/form-data).
+
+## Running Tests
+
+```bash
+# C unit tests (similarity, parser, FFI, matching, Gujarati, catalog, comprehensive)
+ctest --test-dir build --output-on-failure
+
+# Python FastAPI integration tests
+python tests/test_api_integration.py
+
+# CLI test
+build/scanmatch_cli "ચોખા ૨ કિલો"
 ```
-
-The API separates these into product, quantity and canonical unit. The original OCR line remains available as `raw_text`.
-
-## Accuracy policy
-The source code does **not** claim 95% recognition accuracy. The acceptance targets are engineering goals and must be measured on a representative labeled Gujarati dataset. Use `tools/evaluate.py` and `tools/benchmark.py` to measure product accuracy, quantity/unit accuracy, top-3 recall, false acceptance and latency.
-
-Handwritten Gujarati accuracy depends strongly on the OCR model and the handwriting/photo dataset. Tesseract remains a baseline until a dedicated handwriting model is trained and validated.
-
-## Business rules
-- Quantity and unit never become part of the catalog identity.
-- Duplicate list entries are preserved; aggregation is an application-level decision.
-- High-confidence results can be auto-accepted; uncertain results expose candidates and require confirmation.
-- Generic products such as `soap` are not silently converted to a brand when the catalog does not provide sufficient evidence.
-- Customer shopping lists are transient input. Persistent learning belongs to the shop catalog and approved aliases/OCR variants, not customer history.

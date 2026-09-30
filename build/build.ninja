@@ -92,7 +92,7 @@ build libscanmatch.dll libscanmatch.dll.a: C_SHARED_LIBRARY_LINKER__scanmatch_ C
   LINK_FLAGS = -shared -Wl,--export-all-symbols
   LINK_LIBRARIES = -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\scanmatch.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\darshan\credeet-scan-lib\build && C:\tools\msys64\ucrt64\bin\cmake.exe -E copy_if_different C:/darshan/credeet-scan-lib/build/libscanmatch.dll C:/darshan/credeet-scan-lib/build/libscanmatch.so"
+  POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
   TARGET_FILE = libscanmatch.dll

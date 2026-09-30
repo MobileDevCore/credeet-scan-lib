@@ -1,17 +1,17 @@
-Start testing: Sep 29 18:33 Pacific Daylight Time
+Start testing: Sep 29 19:23 Pacific Daylight Time
 ----------------------------------------------------------
 1/7 Testing: similarity
 1/7 Test: similarity
 Command: "C:/darshan/credeet-scan-lib/build/test_similarity.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"similarity" start time: Sep 29 18:33 Pacific Daylight Time
+"similarity" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"similarity" end time: Sep 29 18:33 Pacific Daylight Time
+"similarity" end time: Sep 29 19:23 Pacific Daylight Time
 "similarity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/7 Test: parser
 Command: "C:/darshan/credeet-scan-lib/build/test_parser.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"parser" start time: Sep 29 18:33 Pacific Daylight Time
+"parser" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"parser" end time: Sep 29 18:33 Pacific Daylight Time
+"parser" end time: Sep 29 19:23 Pacific Daylight Time
 "parser" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 3/7 Test: ffi
 Command: "C:/darshan/credeet-scan-lib/build/test_ffi.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"ffi" start time: Sep 29 18:33 Pacific Daylight Time
+"ffi" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ffi" end time: Sep 29 18:33 Pacific Daylight Time
+"ffi" end time: Sep 29 19:23 Pacific Daylight Time
 "ffi" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 4/7 Test: matching
 Command: "C:/darshan/credeet-scan-lib/build/test_matching.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"matching" start time: Sep 29 18:33 Pacific Daylight Time
+"matching" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"matching" end time: Sep 29 18:33 Pacific Daylight Time
+"matching" end time: Sep 29 19:23 Pacific Daylight Time
 "matching" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,14 +64,14 @@ Test Passed.
 5/7 Test: gujarati
 Command: "C:/darshan/credeet-scan-lib/build/test_gujarati.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"gujarati" start time: Sep 29 18:33 Pacific Daylight Time
+"gujarati" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"gujarati" end time: Sep 29 18:33 Pacific Daylight Time
+"gujarati" end time: Sep 29 19:23 Pacific Daylight Time
 "gujarati" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -79,14 +79,14 @@ Test Passed.
 6/7 Test: catalog_gujarati
 Command: "C:/darshan/credeet-scan-lib/build/test_catalog_gujarati.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"catalog_gujarati" start time: Sep 29 18:33 Pacific Daylight Time
+"catalog_gujarati" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"catalog_gujarati" end time: Sep 29 18:33 Pacific Daylight Time
+"catalog_gujarati" end time: Sep 29 19:23 Pacific Daylight Time
 "catalog_gujarati" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -94,7 +94,7 @@ Test Passed.
 7/7 Test: comprehensive
 Command: "C:/darshan/credeet-scan-lib/build/test_comprehensive.exe"
 Directory: C:/darshan/credeet-scan-lib/build
-"comprehensive" start time: Sep 29 18:33 Pacific Daylight Time
+"comprehensive" start time: Sep 29 19:23 Pacific Daylight Time
 Output:
 ----------------------------------------------------------
 PASS: English (Rice 2 kg)
@@ -114,8 +114,8 @@ ALL COMPREHENSIVE TESTS PASSED!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"comprehensive" end time: Sep 29 18:33 Pacific Daylight Time
+"comprehensive" end time: Sep 29 19:23 Pacific Daylight Time
 "comprehensive" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 29 18:33 Pacific Daylight Time
+End testing: Sep 29 19:23 Pacific Daylight Time

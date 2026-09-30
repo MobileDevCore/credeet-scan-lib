@@ -22,7 +22,7 @@ set_target_properties(scanmatch PROPERTIES
     PREFIX "lib"
 )
 
-# On Windows/MinGW, export symbols and generate libscanmatch.so alias
+# On Windows/MinGW, export symbols
 if(WIN32)
     set_target_properties(scanmatch PROPERTIES
         WINDOWS_EXPORT_ALL_SYMBOLS ON
@@ -30,11 +30,6 @@ if(WIN32)
     if(MINGW)
         target_link_options(scanmatch PRIVATE -Wl,--export-all-symbols)
     endif()
-    add_custom_command(TARGET scanmatch POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "$<TARGET_FILE:scanmatch>"
-        "${CMAKE_BINARY_DIR}/libscanmatch.so"
-    )
 endif()
 
 # CLI utility
