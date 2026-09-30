@@ -1,50 +1,76 @@
 cmake_minimum_required(VERSION 3.16)
-project(scanmatch VERSION 0.10.1 LANGUAGES C)
+project(scanmatch VERSION 0.11.0 LANGUAGES C)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(TESSERACT tesseract>=4.0)
-pkg_check_modules(LEPTONICA lept)
-if(NOT TESSERACT_FOUND)
-  message(FATAL_ERROR "ScanMatch requires Tesseract development files (pkg-config: tesseract). Install libtesseract-dev/tesseract-devel.")
-endif()
-if(NOT LEPTONICA_FOUND)
-  message(FATAL_ERROR "ScanMatch requires Leptonica development files (pkg-config: lept). Install libleptonica-dev/leptonica-devel.")
-endif()
-add_library(scanmatch SHARED src/scanmatch.c src/text.c src/parser.c src/ocr.c src/preprocess.c src/embedding.c src/ffi.c)
-target_compile_definitions(scanmatch PRIVATE SCANMATCH_BUILD)
-target_include_directories(scanmatch PUBLIC include ${TESSERACT_INCLUDE_DIRS} ${LEPTONICA_INCLUDE_DIRS})
-target_link_directories(scanmatch PRIVATE ${TESSERACT_LIBRARY_DIRS} ${LEPTONICA_LIBRARY_DIRS})
-target_compile_options(scanmatch PRIVATE ${TESSERACT_CFLAGS_OTHER} ${LEPTONICA_CFLAGS_OTHER})
-target_link_libraries(scanmatch PRIVATE ${TESSERACT_LIBRARIES} ${LEPTONICA_LIBRARIES} m)
-set_target_properties(scanmatch PROPERTIES
-    PREFIX ""
-    WINDOWS_EXPORT_ALL_SYMBOLS ON
+
+# Production C library: Minimal, optimized, zero external OCR/AI dependencies
+add_library(scanmatch SHARED
+    src/scanmatch.c
+    src/text.c
+    src/parser.c
+    src/ffi.c
 )
-if(WIN32 AND MINGW)
-    target_link_options(scanmatch PRIVATE -Wl,--export-all-symbols)
+
+target_compile_definitions(scanmatch PRIVATE SCANMATCH_BUILD)
+target_include_directories(scanmatch PUBLIC include)
+target_link_libraries(scanmatch PRIVATE m)
+
+set_target_properties(scanmatch PROPERTIES
+    OUTPUT_NAME "scanmatch"
+    PREFIX "lib"
+)
+
+# On Windows/MinGW, export symbols and generate libscanmatch.so alias
+if(WIN32)
+    set_target_properties(scanmatch PROPERTIES
+        WINDOWS_EXPORT_ALL_SYMBOLS ON
+    )
+    if(MINGW)
+        target_link_options(scanmatch PRIVATE -Wl,--export-all-symbols)
+    endif()
+    add_custom_command(TARGET scanmatch POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE:scanmatch>"
+        "${CMAKE_BINARY_DIR}/libscanmatch.so"
+    )
 endif()
+
+# CLI utility
 add_executable(scanmatch_cli cli/scanmatch_cli.c)
 target_link_libraries(scanmatch_cli PRIVATE scanmatch)
+target_include_directories(scanmatch_cli PRIVATE include)
+
+# Tests
 add_executable(test_similarity tests/test_similarity.c)
 target_link_libraries(test_similarity PRIVATE scanmatch)
 target_include_directories(test_similarity PRIVATE include)
+
 add_executable(test_parser tests/test_parser.c)
 target_link_libraries(test_parser PRIVATE scanmatch)
 target_include_directories(test_parser PRIVATE include)
+
 add_executable(test_ffi tests/test_ffi.c)
 target_link_libraries(test_ffi PRIVATE scanmatch)
 target_include_directories(test_ffi PRIVATE include)
+
 add_executable(test_matching tests/test_matching.c)
-add_executable(test_gujarati tests/test_gujarati.c)
-add_executable(test_catalog_gujarati tests/test_catalog_gujarati.c)
-target_link_libraries(test_gujarati PRIVATE scanmatch)
-target_link_libraries(test_catalog_gujarati PRIVATE scanmatch)
-target_include_directories(test_catalog_gujarati PRIVATE include)
-target_include_directories(test_gujarati PRIVATE include)
 target_link_libraries(test_matching PRIVATE scanmatch)
 target_include_directories(test_matching PRIVATE include)
+
+add_executable(test_gujarati tests/test_gujarati.c)
+target_link_libraries(test_gujarati PRIVATE scanmatch)
+target_include_directories(test_gujarati PRIVATE include)
+
+add_executable(test_catalog_gujarati tests/test_catalog_gujarati.c)
+target_link_libraries(test_catalog_gujarati PRIVATE scanmatch)
+target_include_directories(test_catalog_gujarati PRIVATE include)
+
+add_executable(test_comprehensive tests/test_comprehensive.c)
+target_link_libraries(test_comprehensive PRIVATE scanmatch)
+target_include_directories(test_comprehensive PRIVATE include)
+
 enable_testing()
 add_test(NAME similarity COMMAND test_similarity)
 add_test(NAME parser COMMAND test_parser)
@@ -52,3 +78,4 @@ add_test(NAME ffi COMMAND test_ffi)
 add_test(NAME matching COMMAND test_matching)
 add_test(NAME gujarati COMMAND test_gujarati)
 add_test(NAME catalog_gujarati COMMAND test_catalog_gujarati)
+add_test(NAME comprehensive COMMAND test_comprehensive)

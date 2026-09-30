@@ -18,7 +18,9 @@ extern "C" {
 typedef struct {
     char product_text[SM_MAX_TEXT];
     double quantity;
+    int has_quantity;        /* 1 if quantity was explicitly present, 0 otherwise */
     char unit[32];
+    int has_unit;            /* 1 if unit was explicitly present, 0 otherwise */
     char language[16];
     double ocr_confidence;
 } SM_ListItem;

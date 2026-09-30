@@ -30,6 +30,7 @@ events:
       - "samu"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -50,6 +51,8 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/ninja-build.com"
       - "C:/tools/msys64/ucrt64/bin/ninja-build.exe"
@@ -59,6 +62,7 @@ events:
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -79,6 +83,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -106,6 +114,7 @@ events:
       - "clang"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -126,12 +135,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/cc.com"
     found: "C:/tools/msys64/ucrt64/bin/cc.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -152,6 +164,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -180,6 +196,7 @@ events:
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -200,6 +217,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "message-v1"
     backtrace:
@@ -220,7 +241,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/4.4.3/CompilerIdC/a.exe
+        C:/darshan/credeet-scan-lib/build/CMakeFiles/4.4.3/CompilerIdC/a.exe
       
   -
     kind: "find-v1"
@@ -243,6 +264,7 @@ events:
       - "ar"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -263,12 +285,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/ar.com"
     found: "C:/tools/msys64/ucrt64/bin/ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -289,6 +314,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -310,6 +339,7 @@ events:
       - "ranlib"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -330,12 +360,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/ranlib.com"
     found: "C:/tools/msys64/ucrt64/bin/ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -356,6 +389,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -377,6 +414,7 @@ events:
       - "strip"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -397,12 +435,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/strip.com"
     found: "C:/tools/msys64/ucrt64/bin/strip.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -423,6 +464,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -444,6 +489,7 @@ events:
       - "ld"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -464,12 +510,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/ld.com"
     found: "C:/tools/msys64/ucrt64/bin/ld.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -490,6 +539,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -511,6 +564,7 @@ events:
       - "nm"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -531,12 +585,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/nm.com"
     found: "C:/tools/msys64/ucrt64/bin/nm.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -557,6 +614,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -578,6 +639,7 @@ events:
       - "objdump"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -598,12 +660,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/objdump.com"
     found: "C:/tools/msys64/ucrt64/bin/objdump.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -624,6 +689,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -645,6 +714,7 @@ events:
       - "objcopy"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -665,12 +735,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/objcopy.com"
     found: "C:/tools/msys64/ucrt64/bin/objcopy.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -691,6 +764,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -712,6 +789,7 @@ events:
       - "readelf"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -732,12 +810,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/readelf.com"
     found: "C:/tools/msys64/ucrt64/bin/readelf.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -758,6 +839,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -779,6 +864,7 @@ events:
       - "dlltool"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -799,12 +885,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/dlltool.com"
     found: "C:/tools/msys64/ucrt64/bin/dlltool.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -825,6 +914,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -846,6 +939,7 @@ events:
       - "addr2line"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -866,12 +960,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/addr2line.com"
     found: "C:/tools/msys64/ucrt64/bin/addr2line.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -892,6 +989,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -913,6 +1014,7 @@ events:
       - "tapi"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -933,10 +1035,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/tapi.com"
       - "C:/tools/msys64/ucrt64/bin/tapi.exe"
       - "C:/tools/msys64/ucrt64/bin/tapi"
+      - "C:/tools/msys64/usr/bin/tapi.com"
+      - "C:/tools/msys64/usr/bin/tapi.exe"
+      - "C:/tools/msys64/usr/bin/tapi"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/tapi.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/tapi.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/tapi"
@@ -997,10 +1104,17 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/tapi.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/tapi.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/tapi"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/tapi.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/tapi.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/tapi"
+      - "C:/tools/msys64/tapi.com"
+      - "C:/tools/msys64/tapi.exe"
+      - "C:/tools/msys64/tapi"
     found: false
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -1021,6 +1135,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1045,6 +1163,7 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -1065,10 +1184,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/gcc-ar-16.2.com"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar-16.2.exe"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar-16.2"
+      - "C:/tools/msys64/usr/bin/gcc-ar-16.2.com"
+      - "C:/tools/msys64/usr/bin/gcc-ar-16.2.exe"
+      - "C:/tools/msys64/usr/bin/gcc-ar-16.2"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar-16.2.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar-16.2.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar-16.2"
@@ -1129,9 +1253,18 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar-16.2.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar-16.2.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar-16.2"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar-16.2.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar-16.2.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar-16.2"
+      - "C:/tools/msys64/gcc-ar-16.2.com"
+      - "C:/tools/msys64/gcc-ar-16.2.exe"
+      - "C:/tools/msys64/gcc-ar-16.2"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar-16.com"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar-16.exe"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar-16"
+      - "C:/tools/msys64/usr/bin/gcc-ar-16.com"
+      - "C:/tools/msys64/usr/bin/gcc-ar-16.exe"
+      - "C:/tools/msys64/usr/bin/gcc-ar-16"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar-16.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar-16.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar-16"
@@ -1192,9 +1325,18 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar-16.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar-16.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar-16"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar-16.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar-16.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar-16"
+      - "C:/tools/msys64/gcc-ar-16.com"
+      - "C:/tools/msys64/gcc-ar-16.exe"
+      - "C:/tools/msys64/gcc-ar-16"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar16.com"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar16.exe"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar16"
+      - "C:/tools/msys64/usr/bin/gcc-ar16.com"
+      - "C:/tools/msys64/usr/bin/gcc-ar16.exe"
+      - "C:/tools/msys64/usr/bin/gcc-ar16"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar16.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar16.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ar16"
@@ -1255,11 +1397,18 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar16.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar16.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ar16"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar16.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar16.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ar16"
+      - "C:/tools/msys64/gcc-ar16.com"
+      - "C:/tools/msys64/gcc-ar16.exe"
+      - "C:/tools/msys64/gcc-ar16"
       - "C:/tools/msys64/ucrt64/bin/gcc-ar.com"
     found: "C:/tools/msys64/ucrt64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -1280,6 +1429,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1304,6 +1457,7 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -1324,10 +1478,15 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
     searched_directories:
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib-16.2.com"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib-16.2.exe"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib-16.2"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib-16.2.com"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib-16.2.exe"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib-16.2"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib-16.2.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib-16.2.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib-16.2"
@@ -1388,9 +1547,18 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib-16.2.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib-16.2.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib-16.2"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib-16.2.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib-16.2.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib-16.2"
+      - "C:/tools/msys64/gcc-ranlib-16.2.com"
+      - "C:/tools/msys64/gcc-ranlib-16.2.exe"
+      - "C:/tools/msys64/gcc-ranlib-16.2"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib-16.com"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib-16.exe"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib-16"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib-16.com"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib-16.exe"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib-16"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib-16.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib-16.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib-16"
@@ -1451,9 +1619,18 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib-16.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib-16.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib-16"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib-16.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib-16.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib-16"
+      - "C:/tools/msys64/gcc-ranlib-16.com"
+      - "C:/tools/msys64/gcc-ranlib-16.exe"
+      - "C:/tools/msys64/gcc-ranlib-16"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib16.com"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib16.exe"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib16"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib16.com"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib16.exe"
+      - "C:/tools/msys64/usr/bin/gcc-ranlib16"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib16.com"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib16.exe"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/gcc-ranlib16"
@@ -1514,11 +1691,18 @@ events:
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib16.com"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib16.exe"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/gcc-ranlib16"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib16.com"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib16.exe"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/gcc-ranlib16"
+      - "C:/tools/msys64/gcc-ranlib16.com"
+      - "C:/tools/msys64/gcc-ranlib16.exe"
+      - "C:/tools/msys64/gcc-ranlib16"
       - "C:/tools/msys64/ucrt64/bin/gcc-ranlib.com"
     found: "C:/tools/msys64/ucrt64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -1539,6 +1723,10 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1563,6 +1751,7 @@ events:
       - "windres"
     candidate_directories:
       - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/usr/bin/"
       - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
       - "C:/Python313/Scripts/"
       - "C:/Python313/"
@@ -1583,15 +1772,17 @@ events:
       - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
       - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
       - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity IDE/bin/"
+      - "C:/tools/msys64/"
+      - "C:/tools/msys64/ucrt64/bin/"
+      - "C:/tools/msys64/ucrt64/sbin/"
+      - "C:/tools/msys64/ucrt64/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
       - "C:/Program Files (x86)/bin/"
       - "C:/Program Files (x86)/sbin/"
       - "C:/Program Files (x86)/"
-      - "C:/tools/msys64/ucrt64/bin/"
-      - "C:/tools/msys64/ucrt64/sbin/"
-      - "C:/tools/msys64/ucrt64/"
       - "C:/Program Files (x86)/scanmatch/bin/"
       - "C:/Program Files (x86)/scanmatch/sbin/"
       - "C:/Program Files (x86)/scanmatch/"
@@ -1601,6 +1792,7 @@ events:
     search_context:
       ENV{PATH}:
         - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
         - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
         - "C:\\Python313\\Scripts\\"
         - "C:\\Python313\\"
@@ -1621,8 +1813,13 @@ events:
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
         - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+        - "C:\\tools\\msys64"
+        - "C:\\tools\\msys64\\ucrt64\\bin"
+        - "C:\\tools\\msys64\\usr\\bin"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/scanmatch"
       CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/tools/msys64/ucrt64"
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/tools/msys64/ucrt64"
@@ -1636,8 +1833,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/CMakeScratch/TryCompile-xflgmo"
-      binary: "C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/CMakeScratch/TryCompile-xflgmo"
+      source: "C:/darshan/credeet-scan-lib/build/CMakeFiles/CMakeScratch/TryCompile-o1er8g"
+      binary: "C:/darshan/credeet-scan-lib/build/CMakeFiles/CMakeScratch/TryCompile-o1er8g"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1646,10 +1843,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: 'C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/CMakeScratch/TryCompile-xflgmo'
+        Change Dir: 'C:/darshan/credeet-scan-lib/build/CMakeFiles/CMakeScratch/TryCompile-o1er8g'
         
-        Run Build Command(s): C:/tools/msys64/ucrt64/bin/ninja.exe -v cmTC_7ea2e
-        [1/2] C:\\tools\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj -c C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): C:/tools/msys64/ucrt64/bin/ninja.exe -v cmTC_5fee6
+        [1/2] C:\\tools\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj -c C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\tools\\msys64\\ucrt64\\bin\\cc.exe
         Target: x86_64-w64-mingw32
@@ -1657,8 +1854,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.0 (Rev4, Built by MSYS2 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7ea2e.dir/'
-         C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/cc1.exe -quiet -v -iprefix C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/ -isysroot C:/tools/msys64/ucrt64/bin/../../ucrt64 -D_REENTRANT C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7ea2e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccpnE0Po.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5fee6.dir/'
+         C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/cc1.exe -quiet -v -iprefix C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/ -isysroot C:/tools/msys64/ucrt64/bin/../../ucrt64 -D_REENTRANT C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5fee6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\DEEP\\AppData\\Local\\Temp\\cc9Nb63u.s
         GNU C23 (Rev4, Built by MSYS2 project) version 16.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 16.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -1675,13 +1872,13 @@ events:
          C:/tools/msys64/ucrt64/bin/../../ucrt64/include
         End of search list.
         Compiler executable checksum: 2022b23b8b7d9c73833c7865f9b2aa21
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7ea2e.dir/'
-         C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccpnE0Po.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5fee6.dir/'
+         C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj C:\\Users\\DEEP\\AppData\\Local\\Temp\\cc9Nb63u.s
         GNU assembler version 2.47 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.47.20260726
         COMPILER_PATH=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/;C:/tools/msys64/ucrt64/bin/../lib/gcc/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/;C:/tools/msys64/ucrt64/bin/../lib/gcc/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/;C:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../;C:/tools/msys64/ucrt64/bin/../../ucrt64/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\tools\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj -o cmTC_7ea2e.exe -Wl,--out-implib,libcmTC_7ea2e.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\tools\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj -o cmTC_5fee6.exe -Wl,--out-implib,libcmTC_5fee6.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\tools\\msys64\\ucrt64\\bin\\cc.exe
         COLLECT_LTO_WRAPPER=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe
@@ -1692,12 +1889,12 @@ events:
         gcc version 16.2.0 (Rev4, Built by MSYS2 project) 
         COMPILER_PATH=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/;C:/tools/msys64/ucrt64/bin/../lib/gcc/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/;C:/tools/msys64/ucrt64/bin/../lib/gcc/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/;C:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/;C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../;C:/tools/msys64/ucrt64/bin/../../ucrt64/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7ea2e.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_7ea2e.'
-         C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/collect2.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_7ea2e.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ea2e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5fee6.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5fee6.'
+         C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/collect2.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_5fee6.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5fee6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o
         collect2 version 16.2.0
-        C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_7ea2e.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ea2e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o
+        C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_5fee6.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5fee6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o
         GNU ld (GNU Binutils) 2.47.20260726
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7ea2e.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_7ea2e.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5fee6.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5fee6.'
         
       exitCode: 0
   -
@@ -1730,10 +1927,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/DEEP/Desktop/Scanmatch/build/CMakeFiles/CMakeScratch/TryCompile-xflgmo']
+        ignore line: [Change Dir: 'C:/darshan/credeet-scan-lib/build/CMakeFiles/CMakeScratch/TryCompile-o1er8g']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/tools/msys64/ucrt64/bin/ninja.exe -v cmTC_7ea2e]
-        ignore line: [[1/2] C:\\tools\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj -c C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/tools/msys64/ucrt64/bin/ninja.exe -v cmTC_5fee6]
+        ignore line: [[1/2] C:\\tools\\msys64\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj -c C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\tools\\msys64\\ucrt64\\bin\\cc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -1741,8 +1938,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.0 (Rev4  Built by MSYS2 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7ea2e.dir/']
-        ignore line: [ C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/cc1.exe -quiet -v -iprefix C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/ -isysroot C:/tools/msys64/ucrt64/bin/../../ucrt64 -D_REENTRANT C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7ea2e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccpnE0Po.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5fee6.dir/']
+        ignore line: [ C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/cc1.exe -quiet -v -iprefix C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/ -isysroot C:/tools/msys64/ucrt64/bin/../../ucrt64 -D_REENTRANT C:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5fee6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\DEEP\\AppData\\Local\\Temp\\cc9Nb63u.s]
         ignore line: [GNU C23 (Rev4  Built by MSYS2 project) version 16.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 16.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -1759,8 +1956,8 @@ events:
         ignore line: [ C:/tools/msys64/ucrt64/bin/../../ucrt64/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2022b23b8b7d9c73833c7865f9b2aa21]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7ea2e.dir/']
-        ignore line: [ C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccpnE0Po.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5fee6.dir/']
+        ignore line: [ C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj C:\\Users\\DEEP\\AppData\\Local\\Temp\\cc9Nb63u.s]
         ignore line: [GNU assembler version 2.47 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.47.20260726]
         ignore line: [COMPILER_PATH=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/]
         ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/]
@@ -1773,8 +1970,8 @@ events:
         ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../]
         ignore line: [C:/tools/msys64/ucrt64/bin/../../ucrt64/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\tools\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj -o cmTC_7ea2e.exe -Wl --out-implib libcmTC_7ea2e.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\tools\\msys64\\ucrt64\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj -o cmTC_5fee6.exe -Wl --out-implib libcmTC_5fee6.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\tools\\msys64\\ucrt64\\bin\\cc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe]
@@ -1794,13 +1991,13 @@ events:
         ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../]
         ignore line: [C:/tools/msys64/ucrt64/bin/../../ucrt64/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7ea2e.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_7ea2e.']
-        link line: [ C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/collect2.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_7ea2e.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ea2e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5fee6.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5fee6.']
+        link line: [ C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/collect2.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_5fee6.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5fee6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o]
           arg [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -1823,7 +2020,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_7ea2e.exe] ==> ignore
+          arg [cmTC_5fee6.exe] ==> ignore
           arg [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o] ==> obj [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o]
           arg [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o] ==> obj [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o]
           arg [-LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0] ==> dir [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0]
@@ -1835,9 +2032,9 @@ events:
           arg [-LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../..] ==> dir [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../..]
           arg [-LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib] ==> dir [C:/tools/msys64/ucrt64/bin/../../ucrt64/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_7ea2e.dll.a] ==> ignore
+          arg [libcmTC_5fee6.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -1862,9 +2059,9 @@ events:
           arg [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o] ==> obj [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o]
           arg [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o] ==> obj [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o]
         ignore line: [collect2 version 16.2.0]
-        link line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_7ea2e.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ea2e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o] ==> linker [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe]
-        link line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_7ea2e.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ea2e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o] ==> linker architecture flags [-m;i386pep]
-        ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\ccP6w5mx.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_7ea2e.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_7ea2e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ea2e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o]
+        link line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_5fee6.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5fee6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o] ==> linker [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe]
+        link line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_5fee6.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5fee6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o] ==> linker architecture flags [-m;i386pep]
+        ignore line: [C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/liblto_plugin.dll -plugin-opt=C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\DEEP\\AppData\\Local\\Temp\\cclq9fGG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/tools/msys64/ucrt64/bin/../../ucrt64 -m i386pep -Bdynamic -o cmTC_5fee6.exe C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtbegin.o -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0 -LC:/tools/msys64/ucrt64/bin/../lib/gcc -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib/../lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../x86_64-w64-mingw32/lib -LC:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../.. -LC:/tools/msys64/ucrt64/bin/../../ucrt64/lib -v CMakeFiles/cmTC_5fee6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5fee6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/../../../../lib/default-manifest.o C:/tools/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/16.2.0/crtend.o]
         linker tool for 'C': C:/tools/msys64/ucrt64/x86_64-w64-mingw32/bin/ld.exe -m;i386pep
         remove lib [gcc_eh]
         remove lib [msvcrt]
@@ -1898,207 +2095,4 @@ events:
     message: |
       Running the C compiler's linker: "C:/tools/msys64/ucrt64/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.47.20260726
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:517 (find_program)"
-      - "CMakeLists.txt:6 (find_package)"
-    mode: "program"
-    variable: "PKG_CONFIG_EXECUTABLE"
-    description: "pkg-config executable"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pkg-config.bat"
-      - "pkg-config"
-      - "pkgconf"
-    candidate_directories:
-      - "C:/tools/msys64/ucrt64/bin/"
-      - "C:/Users/DEEP/.gemini/antigravity-ide/bin/"
-      - "C:/Python313/Scripts/"
-      - "C:/Python313/"
-      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
-      - "C:/Windows/System32/"
-      - "C:/Windows/"
-      - "C:/Windows/System32/wbem/"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
-      - "C:/Windows/System32/OpenSSH/"
-      - "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Node.js/"
-      - "C:/Program Files/nodejs/"
-      - "C:/ProgramData/chocolatey/bin/"
-      - "C:/Program Files/MongoDB/Server/6.0/bin/"
-      - "C:/Users/DEEP/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/DEEP/AppData/Local/Programs/Microsoft VS Code/bin/"
-      - "C:/Users/DEEP/AppData/Roaming/npm/"
-      - "C:/Users/DEEP/AppData/Local/Programs/Ollama/"
-      - "C:/Users/DEEP/AppData/Local/Programs/Antigravity/bin/"
-      - "C:/Users/DEEP/AppData/Local/Programs/IBM Bob/bin/"
-      - "C:/Users/DEEP/AppData/Local/GitHubDesktop/bin/"
-      - "C:/Program Files/bin/"
-      - "C:/Program Files/sbin/"
-      - "C:/Program Files/"
-      - "C:/Program Files (x86)/bin/"
-      - "C:/Program Files (x86)/sbin/"
-      - "C:/Program Files (x86)/"
-      - "C:/tools/msys64/ucrt64/bin/"
-      - "C:/tools/msys64/ucrt64/sbin/"
-      - "C:/tools/msys64/ucrt64/"
-      - "C:/Program Files (x86)/scanmatch/bin/"
-      - "C:/Program Files (x86)/scanmatch/sbin/"
-      - "C:/Program Files (x86)/scanmatch/"
-    searched_directories:
-      - "C:/tools/msys64/ucrt64/bin/pkg-config.bat.com"
-      - "C:/tools/msys64/ucrt64/bin/pkg-config.bat.exe"
-      - "C:/tools/msys64/ucrt64/bin/pkg-config.bat"
-      - "C:/tools/msys64/ucrt64/bin/pkg-config.com"
-    found: "C:/tools/msys64/ucrt64/bin/pkg-config.exe"
-    search_context:
-      ENV{PATH}:
-        - "C:\\tools\\msys64\\ucrt64\\bin"
-        - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
-        - "C:\\Python313\\Scripts\\"
-        - "C:\\Python313\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\MongoDB\\Server\\6.0\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Roaming\\npm"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Ollama"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/scanmatch"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/tools/msys64/ucrt64"
-        - "C:/Program Files (x86)/scanmatch"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:761 (find_library)"
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:7 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_TESSERACT_tesseract"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "tesseract"
-    candidate_directories:
-      - "C:/tools/msys64/ucrt64/lib/"
-    found: "C:/tools/msys64/ucrt64/lib/libtesseract.dll.a"
-    search_context:
-      ENV{PATH}:
-        - "C:\\tools\\msys64\\ucrt64\\bin"
-        - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
-        - "C:\\Python313\\Scripts\\"
-        - "C:\\Python313\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\MongoDB\\Server\\6.0\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Roaming\\npm"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Ollama"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/scanmatch"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/tools/msys64/ucrt64"
-        - "C:/Program Files (x86)/scanmatch"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "C:/Program Files (x86)/scanmatch/bin"
-        - "C:/tools/msys64/ucrt64/bin"
-        - "/bin"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:761 (find_library)"
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
-      - "C:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:8 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_LEPTONICA_leptonica"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "leptonica"
-    candidate_directories:
-      - "C:/tools/msys64/ucrt64/lib/"
-    found: "C:/tools/msys64/ucrt64/lib/libleptonica.dll.a"
-    search_context:
-      ENV{PATH}:
-        - "C:\\tools\\msys64\\ucrt64\\bin"
-        - "C:/Users/DEEP/.gemini/antigravity-ide/bin"
-        - "C:\\Python313\\Scripts\\"
-        - "C:\\Python313\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\MongoDB\\Server\\6.0\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Roaming\\npm"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Ollama"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\Antigravity\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\Programs\\IBM Bob\\bin"
-        - "C:\\Users\\DEEP\\AppData\\Local\\GitHubDesktop\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/scanmatch"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "C:/Program Files"
-        - "C:/Program Files (x86)"
-        - "C:/tools/msys64/ucrt64"
-        - "C:/Program Files (x86)/scanmatch"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "C:/Program Files (x86)/scanmatch/bin"
-        - "C:/tools/msys64/ucrt64/bin"
-        - "/bin"
 ...

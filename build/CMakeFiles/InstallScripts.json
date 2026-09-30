@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/DEEP/Desktop/Scanmatch/build/cmake_install.cmake"
+		"C:/darshan/credeet-scan-lib/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/DEEP/Desktop/Scanmatch/build/
+cmake_ninja_workdir = C$:/darshan/credeet-scan-lib/build/
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target scanmatch
 
@@ -44,65 +44,38 @@ cmake_ninja_workdir = C$:/Users/DEEP/Desktop/Scanmatch/build/
 
 build cmake_object_order_depends_target_scanmatch: phony || .
 
-build CMakeFiles/scanmatch.dir/src/scanmatch.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/scanmatch.c || cmake_object_order_depends_target_scanmatch
+build CMakeFiles/scanmatch.dir/src/scanmatch.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/darshan/credeet-scan-lib/src/scanmatch.c || cmake_object_order_depends_target_scanmatch
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\scanmatch.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  FLAGS = -std=gnu11
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
 
-build CMakeFiles/scanmatch.dir/src/text.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/text.c || cmake_object_order_depends_target_scanmatch
+build CMakeFiles/scanmatch.dir/src/text.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/darshan/credeet-scan-lib/src/text.c || cmake_object_order_depends_target_scanmatch
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\text.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  FLAGS = -std=gnu11
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
 
-build CMakeFiles/scanmatch.dir/src/parser.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/parser.c || cmake_object_order_depends_target_scanmatch
+build CMakeFiles/scanmatch.dir/src/parser.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/darshan/credeet-scan-lib/src/parser.c || cmake_object_order_depends_target_scanmatch
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\parser.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  FLAGS = -std=gnu11
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
 
-build CMakeFiles/scanmatch.dir/src/ocr.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/ocr.c || cmake_object_order_depends_target_scanmatch
-  DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
-  DEP_FILE = CMakeFiles\scanmatch.dir\src\ocr.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
-  OBJECT_DIR = CMakeFiles\scanmatch.dir
-  OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
-
-build CMakeFiles/scanmatch.dir/src/preprocess.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/preprocess.c || cmake_object_order_depends_target_scanmatch
-  DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
-  DEP_FILE = CMakeFiles\scanmatch.dir\src\preprocess.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
-  OBJECT_DIR = CMakeFiles\scanmatch.dir
-  OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
-
-build CMakeFiles/scanmatch.dir/src/embedding.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/embedding.c || cmake_object_order_depends_target_scanmatch
-  DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
-  DEP_FILE = CMakeFiles\scanmatch.dir\src\embedding.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
-  OBJECT_DIR = CMakeFiles\scanmatch.dir
-  OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
-
-build CMakeFiles/scanmatch.dir/src/ffi.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/src/ffi.c || cmake_object_order_depends_target_scanmatch
+build CMakeFiles/scanmatch.dir/src/ffi.c.obj: C_COMPILER__scanmatch_unscanned_ C$:/darshan/credeet-scan-lib/src/ffi.c || cmake_object_order_depends_target_scanmatch
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\ffi.c.obj.d
-  FLAGS = -std=gnu11 -DLIBDEFLATE_DLL
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  FLAGS = -std=gnu11
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
@@ -113,16 +86,16 @@ build CMakeFiles/scanmatch.dir/src/ffi.c.obj: C_COMPILER__scanmatch_unscanned_ C
 
 
 #############################################
-# Link the shared library scanmatch.dll
+# Link the shared library libscanmatch.dll
 
-build scanmatch.dll libscanmatch.dll.a: C_SHARED_LIBRARY_LINKER__scanmatch_ CMakeFiles/scanmatch.dir/src/scanmatch.c.obj CMakeFiles/scanmatch.dir/src/text.c.obj CMakeFiles/scanmatch.dir/src/parser.c.obj CMakeFiles/scanmatch.dir/src/ocr.c.obj CMakeFiles/scanmatch.dir/src/preprocess.c.obj CMakeFiles/scanmatch.dir/src/embedding.c.obj CMakeFiles/scanmatch.dir/src/ffi.c.obj
+build libscanmatch.dll libscanmatch.dll.a: C_SHARED_LIBRARY_LINKER__scanmatch_ CMakeFiles/scanmatch.dir/src/scanmatch.c.obj CMakeFiles/scanmatch.dir/src/text.c.obj CMakeFiles/scanmatch.dir/src/parser.c.obj CMakeFiles/scanmatch.dir/src/ffi.c.obj
   LINK_FLAGS = -shared -Wl,--export-all-symbols
-  LINK_LIBRARIES = -ltesseract  -lleptonica  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\scanmatch.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\darshan\credeet-scan-lib\build && C:\tools\msys64\ucrt64\bin\cmake.exe -E copy_if_different C:/darshan/credeet-scan-lib/build/libscanmatch.dll C:/darshan/credeet-scan-lib/build/libscanmatch.so"
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = scanmatch.dll
+  TARGET_FILE = libscanmatch.dll
   TARGET_IMPLIB = libscanmatch.dll.a
   TARGET_PDB = scanmatch.dll.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\scanmatch.dir
@@ -136,10 +109,10 @@ build scanmatch.dll libscanmatch.dll.a: C_SHARED_LIBRARY_LINKER__scanmatch_ CMak
 
 build cmake_object_order_depends_target_scanmatch_cli: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/scanmatch_cli.dir/cli/scanmatch_cli.c.obj: C_COMPILER__scanmatch_cli_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/cli/scanmatch_cli.c || cmake_object_order_depends_target_scanmatch_cli
+build CMakeFiles/scanmatch_cli.dir/cli/scanmatch_cli.c.obj: C_COMPILER__scanmatch_cli_unscanned_ C$:/darshan/credeet-scan-lib/cli/scanmatch_cli.c || cmake_object_order_depends_target_scanmatch_cli
   DEP_FILE = CMakeFiles\scanmatch_cli.dir\cli\scanmatch_cli.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch_cli.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch_cli.dir\cli
   TARGET_SUPPORT_DIR = CMakeFiles\scanmatch_cli.dir
@@ -152,7 +125,7 @@ build CMakeFiles/scanmatch_cli.dir/cli/scanmatch_cli.c.obj: C_COMPILER__scanmatc
 #############################################
 # Link the executable scanmatch_cli.exe
 
-build scanmatch_cli.exe: C_EXECUTABLE_LINKER__scanmatch_cli_ CMakeFiles/scanmatch_cli.dir/cli/scanmatch_cli.c.obj | libscanmatch.dll.a || scanmatch.dll
+build scanmatch_cli.exe: C_EXECUTABLE_LINKER__scanmatch_cli_ CMakeFiles/scanmatch_cli.dir/cli/scanmatch_cli.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\scanmatch_cli.dir
   POST_BUILD = cd .
@@ -171,10 +144,10 @@ build scanmatch_cli.exe: C_EXECUTABLE_LINKER__scanmatch_cli_ CMakeFiles/scanmatc
 
 build cmake_object_order_depends_target_test_similarity: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/test_similarity.dir/tests/test_similarity.c.obj: C_COMPILER__test_similarity_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/tests/test_similarity.c || cmake_object_order_depends_target_test_similarity
+build CMakeFiles/test_similarity.dir/tests/test_similarity.c.obj: C_COMPILER__test_similarity_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_similarity.c || cmake_object_order_depends_target_test_similarity
   DEP_FILE = CMakeFiles\test_similarity.dir\tests\test_similarity.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\test_similarity.dir
   OBJECT_FILE_DIR = CMakeFiles\test_similarity.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\test_similarity.dir
@@ -187,7 +160,7 @@ build CMakeFiles/test_similarity.dir/tests/test_similarity.c.obj: C_COMPILER__te
 #############################################
 # Link the executable test_similarity.exe
 
-build test_similarity.exe: C_EXECUTABLE_LINKER__test_similarity_ CMakeFiles/test_similarity.dir/tests/test_similarity.c.obj | libscanmatch.dll.a || scanmatch.dll
+build test_similarity.exe: C_EXECUTABLE_LINKER__test_similarity_ CMakeFiles/test_similarity.dir/tests/test_similarity.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_similarity.dir
   POST_BUILD = cd .
@@ -206,10 +179,10 @@ build test_similarity.exe: C_EXECUTABLE_LINKER__test_similarity_ CMakeFiles/test
 
 build cmake_object_order_depends_target_test_parser: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/test_parser.dir/tests/test_parser.c.obj: C_COMPILER__test_parser_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/tests/test_parser.c || cmake_object_order_depends_target_test_parser
+build CMakeFiles/test_parser.dir/tests/test_parser.c.obj: C_COMPILER__test_parser_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_parser.c || cmake_object_order_depends_target_test_parser
   DEP_FILE = CMakeFiles\test_parser.dir\tests\test_parser.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\test_parser.dir
   OBJECT_FILE_DIR = CMakeFiles\test_parser.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\test_parser.dir
@@ -222,7 +195,7 @@ build CMakeFiles/test_parser.dir/tests/test_parser.c.obj: C_COMPILER__test_parse
 #############################################
 # Link the executable test_parser.exe
 
-build test_parser.exe: C_EXECUTABLE_LINKER__test_parser_ CMakeFiles/test_parser.dir/tests/test_parser.c.obj | libscanmatch.dll.a || scanmatch.dll
+build test_parser.exe: C_EXECUTABLE_LINKER__test_parser_ CMakeFiles/test_parser.dir/tests/test_parser.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_parser.dir
   POST_BUILD = cd .
@@ -241,10 +214,10 @@ build test_parser.exe: C_EXECUTABLE_LINKER__test_parser_ CMakeFiles/test_parser.
 
 build cmake_object_order_depends_target_test_ffi: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/test_ffi.dir/tests/test_ffi.c.obj: C_COMPILER__test_ffi_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/tests/test_ffi.c || cmake_object_order_depends_target_test_ffi
+build CMakeFiles/test_ffi.dir/tests/test_ffi.c.obj: C_COMPILER__test_ffi_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_ffi.c || cmake_object_order_depends_target_test_ffi
   DEP_FILE = CMakeFiles\test_ffi.dir\tests\test_ffi.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\test_ffi.dir
   OBJECT_FILE_DIR = CMakeFiles\test_ffi.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\test_ffi.dir
@@ -257,7 +230,7 @@ build CMakeFiles/test_ffi.dir/tests/test_ffi.c.obj: C_COMPILER__test_ffi_unscann
 #############################################
 # Link the executable test_ffi.exe
 
-build test_ffi.exe: C_EXECUTABLE_LINKER__test_ffi_ CMakeFiles/test_ffi.dir/tests/test_ffi.c.obj | libscanmatch.dll.a || scanmatch.dll
+build test_ffi.exe: C_EXECUTABLE_LINKER__test_ffi_ CMakeFiles/test_ffi.dir/tests/test_ffi.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_ffi.dir
   POST_BUILD = cd .
@@ -276,10 +249,10 @@ build test_ffi.exe: C_EXECUTABLE_LINKER__test_ffi_ CMakeFiles/test_ffi.dir/tests
 
 build cmake_object_order_depends_target_test_matching: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/test_matching.dir/tests/test_matching.c.obj: C_COMPILER__test_matching_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/tests/test_matching.c || cmake_object_order_depends_target_test_matching
+build CMakeFiles/test_matching.dir/tests/test_matching.c.obj: C_COMPILER__test_matching_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_matching.c || cmake_object_order_depends_target_test_matching
   DEP_FILE = CMakeFiles\test_matching.dir\tests\test_matching.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\test_matching.dir
   OBJECT_FILE_DIR = CMakeFiles\test_matching.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\test_matching.dir
@@ -292,7 +265,7 @@ build CMakeFiles/test_matching.dir/tests/test_matching.c.obj: C_COMPILER__test_m
 #############################################
 # Link the executable test_matching.exe
 
-build test_matching.exe: C_EXECUTABLE_LINKER__test_matching_ CMakeFiles/test_matching.dir/tests/test_matching.c.obj | libscanmatch.dll.a || scanmatch.dll
+build test_matching.exe: C_EXECUTABLE_LINKER__test_matching_ CMakeFiles/test_matching.dir/tests/test_matching.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_matching.dir
   POST_BUILD = cd .
@@ -311,10 +284,10 @@ build test_matching.exe: C_EXECUTABLE_LINKER__test_matching_ CMakeFiles/test_mat
 
 build cmake_object_order_depends_target_test_gujarati: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/test_gujarati.dir/tests/test_gujarati.c.obj: C_COMPILER__test_gujarati_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/tests/test_gujarati.c || cmake_object_order_depends_target_test_gujarati
+build CMakeFiles/test_gujarati.dir/tests/test_gujarati.c.obj: C_COMPILER__test_gujarati_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_gujarati.c || cmake_object_order_depends_target_test_gujarati
   DEP_FILE = CMakeFiles\test_gujarati.dir\tests\test_gujarati.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\test_gujarati.dir
   OBJECT_FILE_DIR = CMakeFiles\test_gujarati.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\test_gujarati.dir
@@ -327,7 +300,7 @@ build CMakeFiles/test_gujarati.dir/tests/test_gujarati.c.obj: C_COMPILER__test_g
 #############################################
 # Link the executable test_gujarati.exe
 
-build test_gujarati.exe: C_EXECUTABLE_LINKER__test_gujarati_ CMakeFiles/test_gujarati.dir/tests/test_gujarati.c.obj | libscanmatch.dll.a || scanmatch.dll
+build test_gujarati.exe: C_EXECUTABLE_LINKER__test_gujarati_ CMakeFiles/test_gujarati.dir/tests/test_gujarati.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_gujarati.dir
   POST_BUILD = cd .
@@ -346,10 +319,10 @@ build test_gujarati.exe: C_EXECUTABLE_LINKER__test_gujarati_ CMakeFiles/test_guj
 
 build cmake_object_order_depends_target_test_catalog_gujarati: phony || cmake_object_order_depends_target_scanmatch
 
-build CMakeFiles/test_catalog_gujarati.dir/tests/test_catalog_gujarati.c.obj: C_COMPILER__test_catalog_gujarati_unscanned_ C$:/Users/DEEP/Desktop/Scanmatch/tests/test_catalog_gujarati.c || cmake_object_order_depends_target_test_catalog_gujarati
+build CMakeFiles/test_catalog_gujarati.dir/tests/test_catalog_gujarati.c.obj: C_COMPILER__test_catalog_gujarati_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_catalog_gujarati.c || cmake_object_order_depends_target_test_catalog_gujarati
   DEP_FILE = CMakeFiles\test_catalog_gujarati.dir\tests\test_catalog_gujarati.c.obj.d
   FLAGS = -std=gnu11
-  INCLUDES = -IC:/Users/DEEP/Desktop/Scanmatch/include -IC:/tools/msys64/ucrt64/bin/../include/leptonica -IC:/tools/msys64/ucrt64/bin/../include/libpng16 -IC:/tools/msys64/ucrt64/bin/../include/webp -IC:/tools/msys64/ucrt64/bin/../include/openjpeg-2.5
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\test_catalog_gujarati.dir
   OBJECT_FILE_DIR = CMakeFiles\test_catalog_gujarati.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\test_catalog_gujarati.dir
@@ -362,7 +335,7 @@ build CMakeFiles/test_catalog_gujarati.dir/tests/test_catalog_gujarati.c.obj: C_
 #############################################
 # Link the executable test_catalog_gujarati.exe
 
-build test_catalog_gujarati.exe: C_EXECUTABLE_LINKER__test_catalog_gujarati_ CMakeFiles/test_catalog_gujarati.dir/tests/test_catalog_gujarati.c.obj | libscanmatch.dll.a || scanmatch.dll
+build test_catalog_gujarati.exe: C_EXECUTABLE_LINKER__test_catalog_gujarati_ CMakeFiles/test_catalog_gujarati.dir/tests/test_catalog_gujarati.c.obj | libscanmatch.dll.a || libscanmatch.dll
   LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_catalog_gujarati.dir
   POST_BUILD = cd .
@@ -372,12 +345,47 @@ build test_catalog_gujarati.exe: C_EXECUTABLE_LINKER__test_catalog_gujarati_ CMa
   TARGET_PDB = test_catalog_gujarati.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\test_catalog_gujarati.dir
 
+# =============================================================================
+# Object build statements for EXECUTABLE target test_comprehensive
+
+
+#############################################
+# Order-only phony target for test_comprehensive
+
+build cmake_object_order_depends_target_test_comprehensive: phony || cmake_object_order_depends_target_scanmatch
+
+build CMakeFiles/test_comprehensive.dir/tests/test_comprehensive.c.obj: C_COMPILER__test_comprehensive_unscanned_ C$:/darshan/credeet-scan-lib/tests/test_comprehensive.c || cmake_object_order_depends_target_test_comprehensive
+  DEP_FILE = CMakeFiles\test_comprehensive.dir\tests\test_comprehensive.c.obj.d
+  FLAGS = -std=gnu11
+  INCLUDES = -IC:/darshan/credeet-scan-lib/include
+  OBJECT_DIR = CMakeFiles\test_comprehensive.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_comprehensive.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\test_comprehensive.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_comprehensive
+
+
+#############################################
+# Link the executable test_comprehensive.exe
+
+build test_comprehensive.exe: C_EXECUTABLE_LINKER__test_comprehensive_ CMakeFiles/test_comprehensive.dir/tests/test_comprehensive.c.obj | libscanmatch.dll.a || libscanmatch.dll
+  LINK_LIBRARIES = libscanmatch.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\test_comprehensive.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = test_comprehensive.exe
+  TARGET_IMPLIB = libtest_comprehensive.dll.a
+  TARGET_PDB = test_comprehensive.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\test_comprehensive.dir
+
 
 #############################################
 # Utility command for test
 
 build CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\DEEP\Desktop\Scanmatch\build && C:\tools\msys64\ucrt64\bin\ctest.exe "
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\darshan\credeet-scan-lib\build && C:\tools\msys64\ucrt64\bin\ctest.exe "
   DESC = Running tests...
   pool = console
   restat = 1
@@ -389,7 +397,7 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\DEEP\Desktop\Scanmatch\build && C:\tools\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\darshan\credeet-scan-lib\build && C:\tools\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -400,7 +408,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\DEEP\Desktop\Scanmatch\build && C:\tools\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\Users\DEEP\Desktop\Scanmatch -BC:\Users\DEEP\Desktop\Scanmatch\build"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\darshan\credeet-scan-lib\build && C:\tools\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\darshan\credeet-scan-lib -BC:\darshan\credeet-scan-lib\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -410,11 +418,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build scanmatch: phony scanmatch.dll
+build scanmatch: phony libscanmatch.dll
 
 build scanmatch_cli: phony scanmatch_cli.exe
 
 build test_catalog_gujarati: phony test_catalog_gujarati.exe
+
+build test_comprehensive: phony test_comprehensive.exe
 
 build test_ffi: phony test_ffi.exe
 
@@ -432,9 +442,9 @@ build test_similarity: phony test_similarity.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/DEEP/Desktop/Scanmatch/build
+# Folder: C:/darshan/credeet-scan-lib/build
 
-build all: phony scanmatch.dll scanmatch_cli.exe test_similarity.exe test_parser.exe test_ffi.exe test_matching.exe test_gujarati.exe test_catalog_gujarati.exe
+build all: phony libscanmatch.dll scanmatch_cli.exe test_similarity.exe test_parser.exe test_ffi.exe test_matching.exe test_gujarati.exe test_catalog_gujarati.exe test_comprehensive.exe
 
 # =============================================================================
 # Built-in targets
@@ -443,14 +453,14 @@ build all: phony scanmatch.dll scanmatch_cli.exe test_similarity.exe test_parser
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/DEEP/Desktop/Scanmatch/build/cmake_install.cmake C$:/Users/DEEP/Desktop/Scanmatch/build/CTestTestfile.cmake: RERUN_CMAKE | C$:/Users/DEEP/Desktop/Scanmatch/CMakeLists.txt C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.4.3/CMakeCCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake
+build build.ninja C$:/darshan/credeet-scan-lib/build/cmake_install.cmake C$:/darshan/credeet-scan-lib/build/CTestTestfile.cmake: RERUN_CMAKE | C$:/darshan/credeet-scan-lib/CMakeLists.txt C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.4.3/CMakeCCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/DEEP/Desktop/Scanmatch/CMakeLists.txt C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/FindPkgConfig.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.4.3/CMakeCCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake: phony
+build C$:/darshan/credeet-scan-lib/CMakeLists.txt C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/tools/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.4.3/CMakeCCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake: phony
 
 
 #############################################
