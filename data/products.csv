@@ -1,12 +1,48 @@
 product_id,canonical_name,brand,category,aliases_en,aliases_gu,aliases_hi,common_ocr_errors,units,pack_sizes
-RICE001,Rice,,grains,rice|basmati rice,chokha|ચોખા|ચોખ|ચોકા,चावल|चावल,rlce|rce|choka,kg|g,1kg|2kg|5kg|10kg
-WHEAT001,Wheat,,grains,wheat,ઘઉં|ઘઉં,गेहूं|गेहूँ,wh3at|wheat,kg|g,1kg|5kg|10kg
+RICE001,Rice,,grains,rice|basmati rice|chawal,chokha|ચોખા|ચોખ|ચોકા|ખીચડી ચોખા,चावल|चावल,rlce|rce|choka,kg|g,1kg|2kg|5kg|10kg
+WHEAT001,Wheat,,grains,wheat|gehu,ઘઉં|ઘઉ|ટુકડા ઘઉં,गेहूं|गेहूँ,wh3at|wheat|ghau,kg|g,1kg|5kg|10kg
+ATTA001,Wheat Flour / Atta,,staples,atta|wheat flour|gehu atta|flour,ઘઉંનો લોટ|લોટ|આટો|રોટલીનો લોટ,आटा|गेहूं का आटा|कनक,ata|attta|lot,kg|g,1kg|5kg|10kg
+MAIDA001,Maida,,staples,maida|all purpose flour|refined flour,મેંદો|મેંદાનો લોટ|મેંદો લોટ,मैदा,ma1da|medo|meyda,kg|g,500g|1kg
+BESAN001,Besan / Gram Flour,,staples,besan|gram flour|chana flour,બેસન|ચણાનો લોટ,बेसन|चना आटा,besn|chana lot,kg|g,500g|1kg
+POHA001,Poha / Pava,,staples,poha|pava|pauva|flattened rice|aval,પૌઆ|પવા|પૌવા|મકાઈ પવા|મકાઈ ના પવા,पोहा|पौवा|चिवड़ा,p0ha|puva|pauha,kg|g,500g|1kg
+RAVA001,Rava / Suji,,staples,rava|suji|sooji|semolina,રવો|સોજી|સુજી,रवा|सूजी,soji|rav a|sujee,kg|g,500g|1kg
+CORNFLOUR001,Corn Flour,,staples,corn flour|cornflour|corn starch,કોર્ન ફ્લોર|કૉર્ન ફ્લોર|મકાઈનો લોટ,कॉर्न फ्लोर|मक्के का आटा,corn flour|corn flor,packet|kg|g,100g|200g|500g
+TUVER001,Tuver Dal / Toor Dal,,pulses,tuver dal|toor dal|tuver|toor|arhar dal|pigeon pea,તુવેર દાળ|તવેર દાળ|તુવેર|તવેર,तूर दाल|अरहर दाल|तुअर दाल,tuvar|tuver|tur dal,kg|g,500g|1kg|2kg|5kg
+MOONG001,Moong Dal,,pulses,moong dal|mung dal|moong|mung|green gram,મગ દાળ|મગ|મૂગ દાળ|મગની દાળ,मूंग दाल|मूग दाल|मूंग,moong|mung dal|mug dal,kg|g,500g|1kg|2kg
+CHANA001,Chana Dal,,pulses,chana dal|chana|channa dal|bengal gram,ચણા દાળ|ચણા|કાબુલી ચણા,चना दाल|चना|छोले,chana|channa,kg|g,500g|1kg|2kg
+MASOOR001,Masoor Dal,,pulses,masoor dal|masur dal|red lentil,મસૂર દાળ|મસૂર,मसूर दाल|मसूर,masor|masoor,kg|g,500g|1kg
+URAD001,Urad Dal,,pulses,urad dal|udad dal|black gram,અડદ દાળ|અડદ,उड़द दाल|उड़द,urad|udad,kg|g,500g|1kg
+SOYABEAN001,Soyabean,,pulses,soyabean|soya bean|soyu been|soyabin|soya chunks,સોયાબીન|સોયા બીન|સોયા વડી,सोयाबीन|सोया बरी,soyu been|soyabin|soya bean,kg|g,250g|500g|1kg
+SUGAR001,Sugar,,staples,sugar|sakkar,ખાંડ|ખાંડ|સાકર,चीनी|शक्कर,suqar|sug ar|sakkar,kg|g,1kg|2kg|5kg
+GUD001,Jaggery / Gud,,sweeteners,jaggery|gud|gur|gol,ગોળ|ગુડ|ગુલ|દેશી ગોળ,गुड़|गुड,g0l|gud|gur,kg|g,500g|1kg|2kg
+SALT001,Salt / Namak,,spices,salt|namak|meethu|mithu,મીઠું|મીઠુ|નમક,नमक|साल्ट,namak|mithu|meethu,kg|g|packet,1kg
+TURMERIC001,Turmeric / Haldi,,spices,turmeric|haldi|hardar,હળદર|હળદર પાવડર,हल्दी|हल्दी पाउडर,haldi|hardar,kg|g|packet,100g|250g|500g
+CHILLI001,Red Chilli Powder,,spices,red chilli|chilli powder|mirchi|marchu,મરચું|લાલ મરચું|મરચુ,लाल मिर्च|मिर्ची,mirchi|marchu,kg|g|packet,100g|250g|500g
+JEERA001,Cumin / Jeera,,spices,cumin|jeera|jiru|zeera,જીરું|જીરૂ,जीरा|ज़ीरा,jeera|jiru,kg|g|packet,100g|250g|500g
+DHANIA001,Coriander Powder / Dhania,,spices,coriander|dhania|dhana|dhana jeeru,ધાણા|ધાણાજીરું|ધાણાજીરૂ,धनिया|धनिया पाउडर,dhania|dhana,kg|g|packet,100g|250g|500g
+RAI001,Mustard Seeds / Rai,,spices,mustard seeds|rai|sarson,રાઈ|રાય,राई|सरसों,rai|ray,kg|g|packet,100g|250g
 ALMOND001,Almonds,,dry-fruits,almond|almonds|badam,બદામ|બદામા,बादाम|बादाम,alm0nd|badam,kg|g,100g|250g|500g|1kg
-SOAP001,Soap,,personal-care,soap,સાબુ|સાબૂ,साबुन|साबू,s0ap|so ap|sop,piece|packet,1|2|4
-SHAMPOO001,Shampoo,,personal-care,shampoo,શેમ્પૂ|શેમ્પુ,शैम्पू|शैम्पु,shamp00|shamp0o,bottle|ml,100ml|180ml|340ml
-CLINICPLUS001,Clinic Plus Shampoo,Clinic Plus,personal-care,clinic plus|clinic plus shampoo,ક્લિનિક પ્લસ|ક્લિનિક પ્લસ શેમ્પૂ,क्लिनिक प्लस|क्लिनिक प्लस शैम्पू,clnck pls|clinc plus,bottle|ml,100ml|175ml|340ml
+CASHEW001,Cashews / Kaju,,dry-fruits,cashew|cashews|kaju|kaju dana|kaju tukda,કાજુ|કાજુ દાણા|કાજુ દાળી|કાજુ ટુકડા,काजू|काजू टुकड़ा,kaju|kajo|cashewnut,kg|g,100g|250g|500g|1kg
+RAISIN001,Raisins / Kishmish,,dry-fruits,raisins|kishmish|draksh,કિસમિસ|દ્રાક્ષ|લીલી દ્રાક્ષ,किशमिश|दाख,kismis|kishmish,kg|g,100g|250g|500g
+PISTA001,Pistachio / Pista,,dry-fruits,pista|pistachio|piste,પિસ્તા|પીસ્તા,पिस्ता,pista|pisto,kg|g,100g|250g|500g
+PAPAD001,Papad,,snacks,papad|chokha papad|rice papad|urad papad,પાપડ|ચોખાના પાપડ|ચોખા ના પાપડ|અડદ પાપડ,पापड़|चावल पापड़,papad|papadum,packet|piece|kg,1packet|500g|1kg
+MAMRA001,Mamra / Puffed Rice,,snacks,mamra|murmura|puffed rice,મમરા|મુરમૂરા,मुरमुरा|ममरा,mamra|murmura,packet|kg|bag,500g|1kg
+SEV001,Sev,,snacks,sev|nylon sev|besan sev,સેવ|નાયલોન સેવ|તીખી સેવ,सेव|नायलॉन सेव,sev|sayv,packet|kg|g,250g|500g|1kg
 PARLEG001,Parle-G Biscuit,Parle-G,food,parle g|parleg|parle-g,પાર્લે જી|પારલે જી,पार्ले जी|पार्ले-जी,parle 6|parle g,packet|pack|piece,50g|100g|250g
+BISCUIT001,Biscuits,,food,biscuit|biscuits|cookies,બિસ્કિટ|બિસ્કુટ,बिस्कुट|बिस्किट,biscuit|biskit,packet|pack,1packet
+SOAP001,Soap,,personal-care,soap,સાબુ|સાબૂ,साबुन|साबू,s0ap|so ap|sop,piece|packet,1|2|4
 LUX001,Lux Soap,Lux,personal-care,lux soap|lux,લક્સ સાબુ|લક્સ,लक्स साबुन|लक्स,lux sop|luks,piece|packet,1|4
-SUGAR001,Sugar,,staples,sugar,ખાંડ|ખાંડ,चीनी|शक्कर,suqar|sug ar,kg|g,1kg|2kg|5kg
+DETERGENT001,Detergent Powder,,household,detergent|washing powder|surf,ડિટર્જન્ટ|વોશિંગ પાવડર|સર્ફ,डिटर्जेंट|वाशिंग पाउडर|सर्फ,detergent|surf,kg|packet,1kg|2kg|5kg
+DISHWASH001,Dishwash Bar / Liquid,,household,dishwash|dish wash|vim,વાસણ સાબુ|વાસણ ધોવાનો સાબુ,बर्तन साबुन|डिशवॉश,dishwash|vim,piece|bottle,1piece|500ml
+AGARBATTI001,Agarbatti / Incense,,household,agarbatti|agarbati|agarbathi|incense sticks,અગરબત્તી|અગરબતી,अगरबत्ती,agarbatti|agarbathi,packet|box,1packet|1box
+MATCHBOX001,Matchbox,,household,matchbox|matches|match,માચીસ|બાકસ,माचिस,machis|bakas,piece|packet|box,1box|1packet
+SHAMPOO001,Shampoo,,personal-care,shampoo,શેમ્પૂ|શેમ્પુ,शैम्पू|शैम्पु,shamp00|shamp0o,bottle|ml|piece|kg,100ml|180ml|340ml|1kg
+CLINICPLUS001,Clinic Plus Shampoo,Clinic Plus,personal-care,clinic plus|clinic plus shampoo,ક્લિનિક પ્લસ|ક્લિનિક પ્લસ શેમ્પૂ,क्लिनिक प्लस|क्लिनिक प्लस शैम्पू,clnck pls|clinc plus,bottle|ml|piece,100ml|175ml|340ml
+TOOTHPASTE001,Toothpaste,,personal-care,toothpaste|paste|colgate,ટૂથપેસ્ટ|કોલગેટ,टूथपेस्ट|कोलगेट,toothpaste|colgat,piece|tube,1piece|100g|200g
+TOOTHBRUSH001,Toothbrush,,personal-care,toothbrush|brush,ટૂથબ્રશ|બ્રશ,टूथब्रश|ब्रश,toothbrush|brush,piece,1piece
+GROUNDNUT_OIL001,Groundnut Oil / Sing Tel,,oils,groundnut oil|peanut oil|sing tel|singtel,સિંગતેલ|સીંગતેલ|મગફળી તેલ,मूंगफली का तेल|सिंग तेल,sing tel|singtel,liter|kg,1l|5l|15kg
+SUNFLOWER_OIL001,Sunflower Oil,,oils,sunflower oil,સૂર્યમુખી તેલ,सूरजमुखी तेल,sunflower tel,liter|kg,1l|5l
+MUSTARD_OIL001,Mustard Oil / Sarson Tel,,oils,mustard oil|sarson tel,રાઈનું તેલ|સરસવ તેલ,सरसों का तेल|राई तेल,sarson tel,liter|kg,1l|2l|5l
 MILK001,Milk,,dairy,milk,દૂધ|દુધ,दूध|दुध,milk|mi1k,liter|ml,500ml|1l|2l
 TEA001,Tea,,beverages,tea|chai,ચા|ચાહ,चाय|चाह,te a|t3a,kg|g|packet,100g|250g|500g
+COFFEE001,Coffee,,beverages,coffee|instant coffee|nescafe,કોફી|નેસ્કાફે,कॉफ़ी|कॉफी,coffee|kofi,packet|bottle|g,50g|100g|200g

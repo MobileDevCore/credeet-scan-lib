@@ -21,25 +21,28 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(mess
 log = logging.getLogger("scanmatch")
 
 _engine = None
-_lock = threading.Lock()
+_init_lock = threading.Lock()
 _ocr_engine = get_ocr_engine()
 
 def get_engine():
     global _engine
     if _engine is None:
-        candidates = ["libscanmatch.so", "libscanmatch.dll", "scanmatch.dll"]
-        lib_path = None
-        for c in candidates:
-            p = LIB_DIR / c
-            if p.exists():
-                lib_path = p
-                break
-        if not lib_path:
-            lib_path = LIB_DIR / ("scanmatch.dll" if os.name == "nt" else "libscanmatch.so")
+        with _init_lock:
+            if _engine is None:
+                candidates = ["libscanmatch.so", "libscanmatch.dll", "scanmatch.dll"]
+                lib_path = None
+                for c in candidates:
+                    p = LIB_DIR / c
+                    if p.exists():
+                        lib_path = p
+                        break
+                if not lib_path:
+                    lib_path = LIB_DIR / ("scanmatch.dll" if os.name == "nt" else "libscanmatch.so")
 
-        _engine = ScanMatch(lib_path)
-        _engine.load_catalog(CATALOG)
-        log.info(f"Loaded ScanMatch engine from {lib_path} with catalog {CATALOG}")
+                engine = ScanMatch(lib_path)
+                engine.load_catalog(CATALOG)
+                _engine = engine
+                log.info(f"Loaded ScanMatch engine from {lib_path} with catalog {CATALOG}")
     return _engine
 
 class MatchRequest(BaseModel):
@@ -65,8 +68,8 @@ def match_text(req: MatchRequest):
     t0 = time.perf_counter()
     engine = get_engine()
 
-    with _lock:
-        result = engine.process_text(req.ocr_text)
+    # Lock-free concurrent matching: C engine context is read-only after catalog load
+    result = engine.process_text(req.ocr_text)
 
     result["request_id"] = rid
     result["server_time_ms"] = round((time.perf_counter() - t0) * 1000, 2)
@@ -81,7 +84,7 @@ async def scan(
 ):
     """Primary endpoint for shopping-list images.
     
-    1. Extracts text from image using the active OCR interface (MockOCR locally).
+    1. Extracts text from image using active OCR interface (MockOCR locally).
     2. Passes extracted text to libscanmatch C library via Python FFI.
     3. Normalizes Gujarati/Hindi/English, parses quantities/units, and matches products.
     """
@@ -91,8 +94,7 @@ async def scan(
     # Direct text bypass if text was provided in form
     if text:
         engine = get_engine()
-        with _lock:
-            result = engine.process_text(text)
+        result = engine.process_text(text)
         result["request_id"] = rid
         result["ocr_engine"] = "direct_text"
         result["server_time_ms"] = round((time.perf_counter() - t0) * 1000, 2)
@@ -161,10 +163,9 @@ async def scan(
             "items": []
         }
 
-    # Step 2: C Product Processing & Matching Layer (libscanmatch)
+    # Step 2: C Product Processing & Matching Layer (libscanmatch) - lock-free
     engine = get_engine()
-    with _lock:
-        result = engine.process_text(ocr_result.text)
+    result = engine.process_text(ocr_result.text)
 
     result["request_id"] = rid
     result["ocr_engine"] = _ocr_engine.name

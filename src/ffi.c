@@ -11,7 +11,6 @@
 #define strtok_r strtok_s
 #endif
 
-// Internal library context holding loaded catalog and error status
 struct SM_Context {
     SM_Product products[SM_MAX_PRODUCTS];
     size_t product_count;
@@ -58,7 +57,6 @@ void sm_free_string(char *s) {
     }
 }
 
-// Appends formatted text to dynamically growing heap buffer with safety cap (4 MB max)
 static int append_fmt(char **buf, size_t *cap, size_t *len, const char *fmt, ...) {
     for (;;) {
         va_list args;
@@ -76,7 +74,7 @@ static int append_fmt(char **buf, size_t *cap, size_t *len, const char *fmt, ...
         if (new_cap < *len + (size_t)needed + 1) {
             new_cap = *len + (size_t)needed + 1;
         }
-        if (new_cap > 4 * 1024 * 1024) return -2; // Safety cap against unbounded growth
+        if (new_cap > 4 * 1024 * 1024) return -2;
 
         char *new_buf = (char *)realloc(*buf, new_cap);
         if (!new_buf) return -3;
@@ -85,7 +83,6 @@ static int append_fmt(char **buf, size_t *cap, size_t *len, const char *fmt, ...
     }
 }
 
-// Appends a JSON-escaped string with enclosing quotes
 static int append_json_str(char **buf, size_t *cap, size_t *len, const char *s) {
     if (append_fmt(buf, cap, len, "\"")) return -1;
     for (const unsigned char *p = (const unsigned char *)(s ? s : ""); *p; p++) {
@@ -106,8 +103,6 @@ static int append_json_str(char **buf, size_t *cap, size_t *len, const char *s) 
     return append_fmt(buf, cap, len, "\"");
 }
 
-// Core FFI entry point: Processes raw OCR text from Python, normalizes Gujarati/Hindi/English,
-// extracts quantities and units, matches against loaded catalog, and generates structured JSON.
 int sm_process_text_json(SM_Context *ctx, const char *ocr_text, char **out_json) {
     if (!ctx || !out_json) return -1;
     *out_json = NULL;
@@ -125,7 +120,6 @@ int sm_process_text_json(SM_Context *ctx, const char *ocr_text, char **out_json)
         return -3;
     }
 
-    // Check for missing or empty OCR text
     int has_content = 0;
     if (ocr_text) {
         for (const char *p = ocr_text; *p; p++) {
@@ -152,7 +146,6 @@ int sm_process_text_json(SM_Context *ctx, const char *ocr_text, char **out_json)
     append_json_str(&json, &cap, &len, detected_lang);
     append_fmt(&json, &cap, &len, ",\"items\":[");
 
-    // Make local copy of text for thread-safe line splitting
     size_t text_len = strlen(ocr_text);
     char *copy = (char *)malloc(text_len + 1);
     if (!copy) {
@@ -193,14 +186,12 @@ int sm_process_text_json(SM_Context *ctx, const char *ocr_text, char **out_json)
         append_fmt(&json, &cap, &len, ",\"product_text\":");
         append_json_str(&json, &cap, &len, item.product_text);
 
-        // Strict quantity handling: Do NOT invent a quantity if absent
         if (item.has_quantity) {
             append_fmt(&json, &cap, &len, ",\"quantity\":%.3f,\"has_quantity\":true", item.quantity);
         } else {
             append_fmt(&json, &cap, &len, ",\"quantity\":null,\"has_quantity\":false");
         }
 
-        // Strict unit handling: Do NOT invent a unit if absent
         if (item.has_unit) {
             append_fmt(&json, &cap, &len, ",\"unit\":");
             append_json_str(&json, &cap, &len, item.unit);
@@ -209,8 +200,11 @@ int sm_process_text_json(SM_Context *ctx, const char *ocr_text, char **out_json)
             append_fmt(&json, &cap, &len, ",\"unit\":null,\"has_unit\":false");
         }
 
-        // Conservative matching: Check for unidentified and ambiguous candidates
-        if (num_matches <= 0 || matches[0].score < 0.55) {
+        /* Plausible candidate check:
+         * If top match score < 0.35, product is completely unidentified.
+         * Otherwise, preserve best candidate with honest confidence and status.
+         */
+        if (num_matches <= 0 || matches[0].score < 0.35) {
             append_fmt(&json, &cap, &len,
                 ",\"product_id\":null,\"name\":null,\"confidence\":0.0,"
                 "\"status\":\"unidentified\",\"needs_confirmation\":true,"
@@ -218,12 +212,13 @@ int sm_process_text_json(SM_Context *ctx, const char *ocr_text, char **out_json)
             continue;
         }
 
-        int is_ambiguous = (num_matches > 1 && (matches[0].score - matches[1].score) < 0.08 && matches[0].score < 0.95);
-        int is_confirmed = (matches[0].score >= 0.90 && !is_ambiguous);
+        int is_ambiguous = (num_matches > 1 && (matches[0].score - matches[1].score) < 0.08 && matches[0].score < 0.90);
+        int is_confirmed = (matches[0].score >= 0.80 && !is_ambiguous);
 
-        const char *status = is_ambiguous ? "ambiguous" : (is_confirmed ? "confirmed" : "needs_confirmation");
+        const char *status = is_ambiguous ? "ambiguous" : (is_confirmed ? "confirmed" : "suggested");
         const char *reason = is_ambiguous ? "multiple_close_candidates" :
-                             (is_confirmed ? "high_confidence_match" : "moderate_confidence");
+                             (is_confirmed ? "high_confidence_match" :
+                             (matches[0].score >= 0.50 ? "moderate_confidence" : "low_confidence_suggestion"));
 
         append_fmt(&json, &cap, &len, ",\"product_id\":");
         append_json_str(&json, &cap, &len, matches[0].sku);
