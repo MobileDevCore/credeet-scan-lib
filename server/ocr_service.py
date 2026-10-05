@@ -122,6 +122,12 @@ class MockOCR(BaseOCR):
                 return OCRResult(text="ચોખા", confidence=0.95, success=True)
             if "missing_unit" in fn:
                 return OCRResult(text="ચોખા ૨", confidence=0.95, success=True)
+            if "gud" in fn or "jaggery" in fn:
+                return OCRResult(text="Gud 2 kg", confidence=0.98, success=True)
+            if "namak" in fn or "salt" in fn:
+                return OCRResult(text="Namak 1 kg", confidence=0.98, success=True)
+            if "kaju" in fn or "cashew" in fn:
+                return OCRResult(text="Kaju 250 g", confidence=0.98, success=True)
             if "multiline" in fn:
                 return OCRResult(text="ચોખા ૫ કિલો\nદૂધ ૧ લિટર\nસાબુ ૪ નંગ\nRice 2 kg", confidence=0.95, success=True)
 

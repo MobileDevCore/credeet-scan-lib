@@ -61,8 +61,6 @@ const char *sm_confidence_band(double);
 int sm_parse_line(const char*, SM_ListItem*);
 int sm_load_catalog_csv(const char*, SM_Product*, size_t, size_t*);
 int sm_match_product_hybrid(const SM_ListItem*, const SM_Product*, size_t, SM_ProductMatch*, size_t, SM_EmbeddingFn, void*);
-double sm_cosine_similarity(const float*, const float*, size_t);
-double sm_embedding_blend(double,double);
 #ifdef __cplusplus
 }
 #endif

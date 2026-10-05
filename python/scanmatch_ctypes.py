@@ -9,7 +9,29 @@ class ScanMatch:
     Safe memory management: Every C-allocated JSON buffer is guaranteed
     to be freed via sm_free_string in a finally block.
     """
-    def __init__(self, library_path):
+    def __init__(self, library_path=None):
+        if library_path is None:
+            root = Path(__file__).resolve().parents[1]
+            if os.name == "nt":
+                candidates = [
+                    root / "build" / "libscanmatch.dll",
+                    root / "build" / "scanmatch.dll",
+                    root / "build" / "libscanmatch.so",
+                ]
+            else:
+                candidates = [
+                    root / "build" / "libscanmatch.so",
+                    root / "libscanmatch.so",
+                    root / "build" / "libscanmatch.dll",
+                ]
+            for c in candidates:
+                if c.exists():
+                    library_path = c
+                    break
+            if library_path is None:
+                # Default to .so for Linux production deployment
+                library_path = root / "build" / ("libscanmatch.dll" if os.name == "nt" else "libscanmatch.so")
+
         lib_str = os.fspath(library_path)
         if os.name == "nt":
             lib_dir = os.path.dirname(os.path.abspath(lib_str))

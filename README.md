@@ -1,119 +1,177 @@
-# ScanMatch C — Production-Hardened Multilingual Product Matching Engine
+# ScanMatch C — Production Multilingual Product Matching Engine
 
-ScanMatch C is an ultra-lightweight, high-performance C shared library (`libscanmatch.so` / `libscanmatch.dll`) and Python FastAPI integration designed for local and cloud deployment. It specializes in Gujarati-first, Hindi, and English shopping-list normalization, conservative quantity/unit extraction, and catalog matching.
+ScanMatch C is an ultra-lightweight, high-performance C engine (`libscanmatch.so` on Linux, `libscanmatch.dll` on Windows) integrated with a Python FastAPI REST API. It specializes in Gujarati-first, Hindi, and English shopping-list normalization, conservative quantity/unit extraction, and catalog matching.
 
-## Architecture
+---
+
+## 1. System Architecture
 
 ```text
-User image / text
-    ↓
-Python FastAPI (server/app.py) [Concurrent, lock-free matching]
-    ↓
-OCR Layer (server/ocr_service.py) [MockOCR offline / Cloud Vision when configured]
-    ↓  (Extracted text)
-Python FFI (python/scanmatch_ctypes.py)
-    ↓  (In-memory string pointer)
-libscanmatch: sm_process_text_json
-    ├─ 1. Gujarati / Devanagari numeral normalization (૦-૯, ०-९ → 0-9)
-    ├─ 2. Suffix modifier & unit parsing (pukat → packet, theli → bag, walu suffix)
-    ├─ 3. Strict Quantity & Unit extraction (never invents missing values)
-    ├─ 4. Exact-First Matching (canonical, alias, token overlap before fuzzy)
-    ├─ 5. Bounded Stack-Allocated Levenshtein (zero heap allocations in common loop)
-    ├─ 6. Calibrated Confidence Scoring & Candidate Preservation
-    └─ 7. Explainable JSON serialization with fallback product text
-    ↓
-FastAPI returns structured JSON response to client
+Image or Text Input
+      ↓
+FastAPI (/api/v1/scan, /api/v1/match)
+      ↓
+Python OCR Interface (server/ocr_service.py)
+      ↓
+MockOCR (Local, offline, deterministic)
+      ↓
+OCRResult(text, confidence, ...)
+      ↓
+Python ctypes FFI (python/scanmatch_ctypes.py)
+      ↓
+libscanmatch.so (Production C Engine)
+      ├─ Gujarati / Devanagari numeral normalization (૦-૯, ०-९ → 0-9)
+      ├─ Unit parsing (કિલો, કિ.ગ્રા., લિટર, નંગ, ડઝન, પેકેટ, etc.)
+      ├─ Strict Quantity & Unit extraction (never invents missing values)
+      ├─ Catalog matching (Exact, Token overlap, Levenshtein edit distance)
+      ├─ Calibrated confidence scoring & candidate ranking
+      └─ Structured JSON output
+      ↓
+FastAPI JSON Response
 ```
 
-## Key Principles & Guarantees
+### Important Architectural Guarantees:
+- **MockOCR is Local & Offline:** Fully deterministic, runs 100% offline with zero external network calls, zero cloud dependencies, and zero Google credentials.
+- **Future OCR Provider Separation:** Google Cloud Vision is designed as a future replaceable Python OCR provider implementing `BaseOCR`. It is **not** part of the C library.
+- **C Library Decoupling:** `libscanmatch` contains zero OCR or AI dependencies. It compiles cleanly with C11 and links only the standard C math library (`-lm`).
+- **No Duplicate Logic:** No OCR code exists in C; no catalog matching logic is duplicated in Python.
 
-1. **Clean Separation of Concerns:**
-   - Image OCR is decoupled in Python (`server/ocr_service.py`).
-   - `libscanmatch` focuses purely on text normalization, quantity/unit parsing, and catalog matching.
-   - Zero cloud credentials or heavy OCR runtimes inside the C shared library.
-2. **Minimal & Optimized Footprint:**
-   - Memory strategy: Bounded 256-element stack array for Unicode Levenshtein dynamic programming rows, eliminating heap `malloc`/`free` calls per word comparison.
-   - Concurrency: Read-only catalog matching enables concurrent multi-threaded requests in FastAPI without lock serialization.
-   - Early length pruning skips O(N×M) edit distance when length delta precludes high similarity.
-3. **Optimistic-Yet-Honest Matching:**
-   - **High Confidence (>= 0.80):** `status = "confirmed"`, `needs_confirmation = false`.
-   - **Medium Confidence (0.50–0.79):** `status = "suggested"` or `"ambiguous"`, `needs_confirmation = true`.
-   - **Low Confidence (0.35–0.49):** Preserves best candidate as `status = "suggested"`, `needs_confirmation = true`, retaining actual score.
-   - **Unidentified (< 0.35):** `status = "unidentified"`, `product_id = null`, `confidence = 0.0`.
-   - **Conservative Quantities/Units:** Never invents a quantity or unit if absent (`has_quantity = false`, `quantity = null`).
-   - **Product Text Fallback:** Cleaned `product_text` and `normalized_text` are always preserved.
-4. **Gujarati-First Language Features:**
-   - Gujarati Unicode digits (`૦`, `૧`, `૨`, `૩`, `૪`, `૫`, `૬`, `૭`, `૮`, `૯`) normalized to standard ASCII (`0`-`9`).
-   - Common Gujarati OCR confusion recovery (`૫` misclassified as `પ` before units).
-   - Gujarati shopping units (`કિલો`, `કિ.ગ્રા.`, `લિટર`, `નંગ`, `ડઝન`, `પેકેટ`, `થેલી`, etc.) alongside Hindi and English equivalents.
-   - Colloquial modifier handling (`વાળુ`, `વાળું`, `વાળા`, `walu` stripped gracefully).
-   - Multi-byte UTF-8 codepoint edit similarity.
+---
 
-## Product Catalog (`data/products.csv`)
+## 2. Directory Structure
 
-The catalog covers 37 common Indian kirana products across 10 major categories:
-- **Staples:** Rice, Wheat, Atta / Wheat Flour, Maida, Besan, Poha / Pava, Rava / Suji, Corn Flour
-- **Pulses:** Tuver / Toor Dal, Moong Dal, Chana Dal, Masoor Dal, Urad Dal, Soyabean
-- **Sweeteners:** Sugar, Jaggery / Gud / Gol
-- **Spices & Salts:** Salt / Namak, Turmeric / Haldi, Red Chilli, Cumin / Jeera, Coriander / Dhania, Mustard / Rai
-- **Dry Fruits:** Almonds, Cashews / Kaju, Raisins / Kishmish, Pistachio / Pista
-- **Snacks:** Papad, Mamra / Puffed Rice, Sev, Parle-G Biscuit, Biscuits
-- **Household:** Soap, Lux Soap, Detergent, Dishwash, Agarbatti, Matchbox
-- **Personal Care:** Shampoo, Clinic Plus Shampoo, Toothpaste, Toothbrush
-- **Oils:** Groundnut Oil / Sing Tel, Sunflower Oil, Mustard Oil
-- **Dairy & Beverages:** Milk, Tea, Coffee
+```text
+ScanMatch/
+├── CMakeLists.txt              # Standard C11 CMake build configuration
+├── README.md                   # System documentation and operational guide
+├── run_server.py               # Uvicorn server launcher
+│
+├── src/                        # Production C engine source
+│   ├── scanmatch.c             # Catalog matching & Unicode Levenshtein distance
+│   ├── parser.c                # Multilingual quantity & unit parser
+│   ├── text.c                  # Gujarati/Hindi/English normalization & UTF-8 utils
+│   └── ffi.c                   # Reentrant C context & JSON serialization FFI
+│
+├── include/                    # Public C headers
+│   ├── scanmatch.h             # Core data structures and matching API
+│   ├── scanmatch_ffi.h         # Context lifecycle and JSON FFI exports
+│   └── scanmatch_text.h        # Text normalization and UTF-8 declarations
+│
+├── cli/                        # CLI utility for text processing & troubleshooting
+│   └── scanmatch_cli.c
+│
+├── python/                     # Python ctypes FFI layer
+│   ├── __init__.py
+│   └── scanmatch_ctypes.py     # ScanMatch FFI wrapper with safe memory cleanup
+│
+├── server/                     # FastAPI application & OCR service
+│   ├── app.py                  # Endpoints: /health, /api/v1/match, /api/v1/scan
+│   ├── ocr_service.py          # BaseOCR, MockOCR (local/offline), CloudVision stub
+│   └── requirements.txt        # FastAPI, Uvicorn, Python-Multipart
+│
+├── data/                       # Production kirana catalog
+│   └── products.csv            # 56 items across 10 kirana categories
+│
+├── tests/                      # Automated regression & integration test suites
+│   ├── test_similarity.c       # Unicode string similarity tests
+│   ├── test_parser.c           # Quantity & unit parsing tests
+│   ├── test_ffi.c              # C FFI context & JSON tests
+│   ├── test_matching.c         # Product matching tests
+│   ├── test_gujarati.c         # Gujarati digit and script normalization tests
+│   ├── test_catalog_gujarati.c # Real catalog matching tests
+│   ├── test_comprehensive.c    # End-to-end multi-language test suite
+│   └── test_api_integration.py # 16 FastAPI + MockOCR + FFI test scenarios
+│
+├── tools/                      # Development & troubleshooting tools
+│   ├── test_server_api.py      # HTTP endpoint verification
+│   └── test_edge_cases.py      # Multilingual edge case validation
+│
+└── build/                      # Build outputs
+    └── libscanmatch.so / .dll  # Production shared library
+```
 
-Each item contains English, Gujarati (`aliases_gu`), Hindi (`aliases_hi`), and common OCR error aliases.
+---
 
-## Build from Source
+## 3. Product Catalog (`data/products.csv`)
 
-### On Windows / MSYS2
+The catalog contains 56 kirana products across 10 categories:
+- **Grains & Staples:** Rice (ચોખા / चावल), Wheat (ઘઉં / गेहूं), Atta, Maida, Besan, Poha, Rava, Corn Flour, Rolled Flakes
+- **Pulses:** Tuver Dal, Moong Dal, Chana Dal, Masoor Dal, Urad Dal, Soyabean
+- **Sweeteners:** Sugar (ખાંડ / चीनी), Jaggery / Gud (ગોળ / गुड़)
+- **Spices & Salts:** Salt / Namak (મીઠું / नमक), Haldi, Mirchi, Jeera, Dhania, Rai, Ajwain, Black Pepper
+- **Dry Fruits:** Almonds (બદામ / बादाम), Cashews / Kaju (કાજુ / काजू), Raisins, Pistachio
+- **Snacks & Biscuits:** Papad, Mamra, Sev, Parle-G, Biscuits
+- **Personal Care:** Soap, Lux Soap, Shampoo, Clinic Plus, Toothpaste, Toothbrush, Dant Manjan
+- **Household:** Detergent, Dishwash, Agarbatti, Matchbox, Dhoop
+- **Edible & Hair Oils:** Sing Tel (Groundnut Oil), Sunflower Oil, Mustard Oil, Dabur Amla Hair Oil
+- **Dairy & Beverages:** Milk (દૂધ / दूध), Tea (ચા / चाय), Coffee
+
+Each product entry provides canonical names, brand, category, aliases in English, Gujarati (`aliases_gu`), Hindi (`aliases_hi`), common OCR typos, and standard units/pack sizes.
+
+---
+
+## 4. Build Instructions
+
+### Linux / DigitalOcean (Target Deployment)
+```bash
+# Standard CMake build generates genuine ELF 64-bit libscanmatch.so
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build --output-on-failure
+```
+
+Output: `build/libscanmatch.so` (genuine Linux ELF shared library).
+
+### Windows / MSYS2 (Local Development)
 ```bash
 cmake -S . -B build -G "Ninja"
 cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
-### On Linux / DigitalOcean
-```bash
-cmake -S . -B build
-cmake --build build
-ctest --test-dir build --output-on-failure
-```
+Output: `build/libscanmatch.dll`.
 
-## Running the FastAPI REST Server
+---
+
+## 5. Running the REST API Server
 
 ```bash
-# Install server requirements
+# Install dependencies
 pip install -r server/requirements.txt
 
-# Run server
+# Start server locally
 python run_server.py
 ```
 
-### API Endpoints
-- `GET /health` — Check server status, catalog status, and active OCR backend.
-- `POST /api/v1/match` — Ingest raw OCR text directly (JSON body: `{"ocr_text": "..."}`).
-- `POST /api/v1/scan` — Upload shopping-list image file or form text.
+### Endpoints
+- `GET /health` — Health check, catalog status, and active OCR engine (`mock`).
+- `POST /api/v1/match` — JSON matching endpoint (`{"ocr_text": "..."}`).
+- `POST /api/v1/scan` — Multipart image upload endpoint (processed via MockOCR locally).
 
-## Running Tests
+---
+
+## 6. Running Automated Tests
 
 ```bash
-# 1. C Unit & Comprehensive Tests
+# 1. C Test Suite (7 unit & comprehensive test suites)
 ctest --test-dir build --output-on-failure
 
-# 2. FastAPI Integration Tests (16 test scenarios)
+# 2. FastAPI End-to-End Integration Tests (16 scenarios)
 python tests/test_api_integration.py
 
-# 3. Server API Endpoint Tests
+# 3. HTTP Server API Endpoint Verification
 python tools/test_server_api.py
 
-# 4. Multilingual Kirana Edge Case Tests
+# 4. Multilingual Edge Case Validation
 python tools/test_edge_cases.py
 ```
 
-## Known Limitations
+---
 
-1. **OCR Backend:** Google Cloud Vision is not configured by default; local mock OCR is used unless credentials are provided in the environment.
-2. **Catalog Scope:** Matching is bounded by the loaded catalog (`data/products.csv`). Products outside the catalog with similarity < 0.35 are marked `unidentified`.
-3. **Handwriting Legibility:** Extremely corrupted or illegible text strings where word boundaries cannot be determined will return `unidentified`.
+## 7. Confidence & Status Policy
+
+- **Confirmed (`status = "confirmed"`):** High confidence (score ≥ 0.80), unambiguous match. `needs_confirmation = false`.
+- **Suggested (`status = "suggested"`):** Moderate confidence (0.35 ≤ score < 0.80). `needs_confirmation = true`.
+- **Ambiguous (`status = "ambiguous"`):** Multiple candidates within 0.08 score delta. `needs_confirmation = true`.
+- **Unidentified (`status = "unidentified"`):** Score < 0.35. `product_id = null`, `confidence = 0.0`.
+- **Conservative Quantities:** Never invents quantity or unit if omitted from the input line.

@@ -53,9 +53,10 @@ static int match_indic_unit(const char *p, char *out, size_t cap) {
         {"પીસો", "piece"}, {"પીસ", "piece"},
         {"ડઝન", "dozen"}, {"ડજન", "dozen"},
         {"પેકેટ", "packet"}, {"પેક", "packet"},
-        {"થેલીઓ", "bag"}, {"થેલી", "bag"}, {"બોરી", "bag"},
+        {"થેલીઓ", "bag"}, {"થેલી", "bag"}, {"કોથળીઓ", "bag"}, {"કોથળી", "bag"}, {"બોરી", "bag"},
         {"બોટલ", "bottle"}, {"બોતલ", "bottle"},
         {"બોક્સ", "box"}, {"બોકસ", "box"},
+        {"રૂપિયા", "rupee"}, {"રૂ.", "rupee"},
         /* Hindi units */
         {"किलोग्राम", "kg"}, {"किलो", "kg"}, {"कलि", "kg"}, {"किग्रा", "kg"},
         {"मिलीलीटर", "ml"}, {"मिली", "ml"},
@@ -295,6 +296,51 @@ int sm_parse_line(const char *line, SM_ListItem *out) {
                 out->product_text[--z] = '\0';
             }
             sm_trim(out->product_text);
+        }
+    }
+
+    /* Pattern 6: Embedded quantity (e.g. "સોપારી 10 સુંઘારી" or "badam 500 tukda") */
+    if (!out->has_quantity) {
+        char *str = out->product_text;
+        for (size_t i = 0; str[i]; i++) {
+            if (isspace((unsigned char)str[i])) {
+                size_t start = i + 1;
+                while (str[start] && isspace((unsigned char)str[start])) start++;
+                double q_mid = 0;
+                size_t used_mid = 0;
+                if (parse_num(str + start, &q_mid, &used_mid) && used_mid > 0) {
+                    size_t after = start + used_mid;
+                    if (str[after] == '\0' || isspace((unsigned char)str[after])) {
+                        while (str[after] && isspace((unsigned char)str[after])) after++;
+
+                        char u_mid[32] = {0};
+                        int ul_mid = unit_at(str + after, u_mid, sizeof(u_mid));
+                        if (ul_mid > 0) {
+                            out->quantity = q_mid;
+                            out->has_quantity = 1;
+                            snprintf(out->unit, sizeof(out->unit), "%s", u_mid);
+                            out->has_unit = 1;
+                            after += ul_mid;
+                            while (str[after] && isspace((unsigned char)str[after])) after++;
+                        } else {
+                            out->quantity = q_mid;
+                            out->has_quantity = 1;
+                        }
+
+                        char combined[SM_MAX_TEXT];
+                        str[i] = '\0';
+                        sm_trim(str);
+                        if (str[after]) {
+                            snprintf(combined, sizeof(combined), "%s %s", str, str + after);
+                        } else {
+                            snprintf(combined, sizeof(combined), "%s", str);
+                        }
+                        sm_trim(combined);
+                        snprintf(out->product_text, sizeof(out->product_text), "%s", combined);
+                        break;
+                    }
+                }
+            }
         }
     }
 

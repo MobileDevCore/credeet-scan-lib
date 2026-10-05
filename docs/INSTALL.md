@@ -1,7 +1,11 @@
 # Installation
 
 ## Debian/Ubuntu
-Install C compiler, CMake, pkg-config, Tesseract development files, Leptonica development files and language packs for English/Hindi/Gujarati. Then run:
+Install C compiler (GCC/Clang), CMake, and standard build tools:
+```bash
+sudo apt update && sudo apt install -y build-essential cmake
+```
+Build C library and run test suite:
 ```bash
 cmake -S . -B build
 cmake --build build

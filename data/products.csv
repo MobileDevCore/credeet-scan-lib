@@ -46,3 +46,11 @@ MUSTARD_OIL001,Mustard Oil / Sarson Tel,,oils,mustard oil|sarson tel,રાઈ�
 MILK001,Milk,,dairy,milk,દૂધ|દુધ,दूध|दुध,milk|mi1k,liter|ml,500ml|1l|2l
 TEA001,Tea,,beverages,tea|chai,ચા|ચાહ,चाय|चाह,te a|t3a,kg|g|packet,100g|250g|500g
 COFFEE001,Coffee,,beverages,coffee|instant coffee|nescafe,કોફી|નેસ્કાફે,कॉफ़ी|कॉफी,coffee|kofi,packet|bottle|g,50g|100g|200g
+AMLA_OIL001,Dabur Amla Hair Oil,Dabur,hair-care,dabur amla hair oil|amla hair oil|amla tel|amla,ડાબર આમલા તેલ|આમળા તેલ|આમલા તેલ|ડાબર આમલા,डाबर आंवला तेल|आंवला तेल,amla tel|dabur amla,bottle|ml|piece,100ml|200ml|500ml
+BETELNUT001,Betel Nut / Sopari,,staples,betel nut|sopari|supari|sundhari|sudhari,સોપારી|સુધારેલી સોપારી|સુંઘારી|સુંધારી|સોપારી સુંઘારી,सुपारी,sopari|supari,kg|g|packet|piece,50g|100g|250g
+DHOOP001,Dhoop / Incense Dhoop,,household,dhoop|incense dhoop|dhoopbatti|dhup,ધૂપ|ધુપ|ધૂપબત્તી|ધુપ બત્તી,धूप|धूपबत्ती,dhoop|dhup,packet|box|g,50g|100g
+AJWAIN001,Ajwain / Carom Seeds,,spices,ajwain|carom seeds|ajmo|ajmer,અજમો|અજમો દાણા|અજમેર,अजवाइन|अजवायन,ajmo|ajwain,kg|g|packet|rupee,50g|100g|250g
+BLACKPEPPER001,Black Pepper / Kali Mirch,,spices,black pepper|kali mirch|mari|kali mari,કાળા મરી|મરી|કાલી મીરચ|કાલી મરી,काली मिर्च|गोल मिर्च,mari|kali mirch,kg|g|packet,50g|100g|250g
+GREEN_CHILLI001,Green Chilli Sauce / Chilli,,spices,green chilli|chilli|green chilli sauce|green chili,લીલા મરચાં|લીલું મરચું|ગ્રીન ચીલી|ગ્રીન મરચાં,हरी मिर्च|ग्रीन चिली,green chilli|green chili,piece|packet|bottle|g,100g|250g
+ROLLED_FLAKES001,Rolled Flakes / Oats,,staples,rolled flakes|roll flakes|oats|flakes,રોલ ફ્લેક્સ|ઓટ્સ|રોલડ ફ્લેક્સ|ફ્લેક્સ,रोल्ड फ्लेक्स|ओट्स,roll flakes|rolled flakes,packet|box|g,500g|1kg
+DANT_MANJAN001,Dant Manjan / Toothpowder,,personal-care,dant manjan|tooth powder|manjan,દંત મંજન|મંજન|દંતમંજન,दंत मंजन|मंजन,dant manjan|manjan,piece|bottle|g,50g|100g|200g

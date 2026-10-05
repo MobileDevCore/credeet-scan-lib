@@ -29,7 +29,10 @@ def get_engine():
     if _engine is None:
         with _init_lock:
             if _engine is None:
-                candidates = ["libscanmatch.so", "libscanmatch.dll", "scanmatch.dll"]
+                if os.name == "nt":
+                    candidates = ["libscanmatch.dll", "scanmatch.dll", "libscanmatch.so"]
+                else:
+                    candidates = ["libscanmatch.so", "libscanmatch.dll", "scanmatch.dll"]
                 lib_path = None
                 for c in candidates:
                     p = LIB_DIR / c
@@ -37,7 +40,7 @@ def get_engine():
                         lib_path = p
                         break
                 if not lib_path:
-                    lib_path = LIB_DIR / ("scanmatch.dll" if os.name == "nt" else "libscanmatch.so")
+                    lib_path = LIB_DIR / ("libscanmatch.dll" if os.name == "nt" else "libscanmatch.so")
 
                 engine = ScanMatch(lib_path)
                 engine.load_catalog(CATALOG)

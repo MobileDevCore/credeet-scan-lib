@@ -1,8 +1,8 @@
-similarity 12 0.0003634
-parser 12 0.000366808
-ffi 12 0.000546475
-matching 12 0.000381875
-gujarati 12 0.000427067
-catalog_gujarati 12 0.000606967
-comprehensive 12 0.00166873
+similarity 18 0.00405594
+parser 18 0.000404294
+ffi 18 0.000529844
+matching 18 0.000344261
+gujarati 18 0.000321678
+catalog_gujarati 18 0.000531806
+comprehensive 18 0.00138865
 ---

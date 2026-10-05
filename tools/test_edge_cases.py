@@ -6,7 +6,7 @@ if hasattr(sys.stdout, 'reconfigure'):
     except Exception: pass
 from python.scanmatch_ctypes import ScanMatch
 
-sm = ScanMatch('build/libscanmatch.dll')
+sm = ScanMatch()
 sm.load_catalog('data/products.csv')
 
 edge_cases = [
