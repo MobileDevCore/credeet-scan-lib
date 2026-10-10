@@ -30,6 +30,13 @@ if(WIN32)
     if(MINGW)
         target_link_options(scanmatch PRIVATE -Wl,--export-all-symbols)
     endif()
+    # Create libscanmatch.so alias/copy for Unix compatibility and loaders
+    add_custom_command(TARGET scanmatch POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_FILE:scanmatch>
+            ${CMAKE_BINARY_DIR}/libscanmatch.so
+        COMMENT "Generating libscanmatch.so compatibility copy"
+    )
 endif()
 
 # CLI utility

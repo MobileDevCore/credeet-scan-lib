@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: scanmatch
-# Configurations: 
+# Configurations: Release
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__scanmatch_unscanned_
+rule C_COMPILER__scanmatch_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,16 +24,16 @@ rule C_COMPILER__scanmatch_unscanned_
 #############################################
 # Rule for linking C shared library.
 
-rule C_SHARED_LIBRARY_LINKER__scanmatch_
+rule C_SHARED_LIBRARY_LINKER__scanmatch_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
-  description = Linking C shared library $TARGET_FILE
+  description = Linking C shared library $TARGET_FILE; Generating libscanmatch.so compatibility copy
   restat = $RESTAT
 
 
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__scanmatch_cli_unscanned_
+rule C_COMPILER__scanmatch_cli_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -43,7 +43,7 @@ rule C_COMPILER__scanmatch_cli_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__scanmatch_cli_
+rule C_EXECUTABLE_LINKER__scanmatch_cli_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -52,7 +52,7 @@ rule C_EXECUTABLE_LINKER__scanmatch_cli_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_similarity_unscanned_
+rule C_COMPILER__test_similarity_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -62,7 +62,7 @@ rule C_COMPILER__test_similarity_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_similarity_
+rule C_EXECUTABLE_LINKER__test_similarity_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -71,7 +71,7 @@ rule C_EXECUTABLE_LINKER__test_similarity_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_parser_unscanned_
+rule C_COMPILER__test_parser_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -81,7 +81,7 @@ rule C_COMPILER__test_parser_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_parser_
+rule C_EXECUTABLE_LINKER__test_parser_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -90,7 +90,7 @@ rule C_EXECUTABLE_LINKER__test_parser_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_ffi_unscanned_
+rule C_COMPILER__test_ffi_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -100,7 +100,7 @@ rule C_COMPILER__test_ffi_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_ffi_
+rule C_EXECUTABLE_LINKER__test_ffi_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -109,7 +109,7 @@ rule C_EXECUTABLE_LINKER__test_ffi_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_matching_unscanned_
+rule C_COMPILER__test_matching_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -119,7 +119,7 @@ rule C_COMPILER__test_matching_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_matching_
+rule C_EXECUTABLE_LINKER__test_matching_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -128,7 +128,7 @@ rule C_EXECUTABLE_LINKER__test_matching_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_gujarati_unscanned_
+rule C_COMPILER__test_gujarati_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -138,7 +138,7 @@ rule C_COMPILER__test_gujarati_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_gujarati_
+rule C_EXECUTABLE_LINKER__test_gujarati_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -147,7 +147,7 @@ rule C_EXECUTABLE_LINKER__test_gujarati_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_catalog_gujarati_unscanned_
+rule C_COMPILER__test_catalog_gujarati_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -157,7 +157,7 @@ rule C_COMPILER__test_catalog_gujarati_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_catalog_gujarati_
+rule C_EXECUTABLE_LINKER__test_catalog_gujarati_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -166,7 +166,7 @@ rule C_EXECUTABLE_LINKER__test_catalog_gujarati_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__test_comprehensive_unscanned_
+rule C_COMPILER__test_comprehensive_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\tools\msys64\ucrt64\bin\cc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -176,7 +176,7 @@ rule C_COMPILER__test_comprehensive_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__test_comprehensive_
+rule C_EXECUTABLE_LINKER__test_comprehensive_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\tools\msys64\ucrt64\bin\cc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
