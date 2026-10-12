@@ -53,7 +53,7 @@ build CMakeFiles/scanmatch.dir/src/scanmatch.c.obj: C_COMPILER__scanmatch_unscan
   CONFIG = Release
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\scanmatch.c.obj.d
-  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11
+  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11 -Os -ffunction-sections -fdata-sections -fno-asynchronous-unwind-tables
   INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
@@ -63,7 +63,7 @@ build CMakeFiles/scanmatch.dir/src/text.c.obj: C_COMPILER__scanmatch_unscanned_R
   CONFIG = Release
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\text.c.obj.d
-  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11
+  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11 -Os -ffunction-sections -fdata-sections -fno-asynchronous-unwind-tables
   INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
@@ -73,7 +73,7 @@ build CMakeFiles/scanmatch.dir/src/parser.c.obj: C_COMPILER__scanmatch_unscanned
   CONFIG = Release
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\parser.c.obj.d
-  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11
+  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11 -Os -ffunction-sections -fdata-sections -fno-asynchronous-unwind-tables
   INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
@@ -83,7 +83,7 @@ build CMakeFiles/scanmatch.dir/src/ffi.c.obj: C_COMPILER__scanmatch_unscanned_Re
   CONFIG = Release
   DEFINES = -DSCANMATCH_BUILD -Dscanmatch_EXPORTS
   DEP_FILE = CMakeFiles\scanmatch.dir\src\ffi.c.obj.d
-  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11
+  FLAGS = -O2 -O3 -DNDEBUG -std=gnu11 -Os -ffunction-sections -fdata-sections -fno-asynchronous-unwind-tables
   INCLUDES = -IC:/darshan/credeet-scan-lib/include
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   OBJECT_FILE_DIR = CMakeFiles\scanmatch.dir\src
@@ -100,7 +100,7 @@ build CMakeFiles/scanmatch.dir/src/ffi.c.obj: C_COMPILER__scanmatch_unscanned_Re
 build libscanmatch.dll libscanmatch.dll.a: C_SHARED_LIBRARY_LINKER__scanmatch_Release CMakeFiles/scanmatch.dir/src/scanmatch.c.obj CMakeFiles/scanmatch.dir/src/text.c.obj CMakeFiles/scanmatch.dir/src/parser.c.obj CMakeFiles/scanmatch.dir/src/ffi.c.obj
   CONFIG = Release
   LANGUAGE_COMPILE_FLAGS = -O2 -O3 -DNDEBUG
-  LINK_FLAGS = -shared -Wl,--export-all-symbols
+  LINK_FLAGS = -shared -Wl,--gc-sections -Wl,-s -Wl,--export-all-symbols
   LINK_LIBRARIES = -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\scanmatch.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\darshan\credeet-scan-lib\build && C:\tools\msys64\ucrt64\bin\cmake.exe -E copy_if_different C:/darshan/credeet-scan-lib/build/libscanmatch.dll C:/darshan/credeet-scan-lib/build/libscanmatch.so"

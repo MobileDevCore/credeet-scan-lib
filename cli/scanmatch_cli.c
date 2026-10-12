@@ -3,13 +3,40 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+#include <windows.h>
+#include <shellapi.h>
+#endif
+
 int main(int argc, char **argv) {
+#ifdef _WIN32
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
+#endif
+
     if (argc < 2) {
         fprintf(stderr, "Usage: scanmatch_cli <text_or_file> [catalog.csv]\n");
         return 2;
     }
 
     const char *input = argv[1];
+    char *utf8_cmd_input = NULL;
+#ifdef _WIN32
+    int wargc = 0;
+    LPWSTR *wargv = CommandLineToArgvW(GetCommandLineW(), &wargc);
+    if (wargv && wargc >= 2) {
+        int needed = WideCharToMultiByte(CP_UTF8, 0, wargv[1], -1, NULL, 0, NULL, NULL);
+        if (needed > 0) {
+            utf8_cmd_input = (char *)malloc(needed);
+            if (utf8_cmd_input) {
+                WideCharToMultiByte(CP_UTF8, 0, wargv[1], -1, utf8_cmd_input, needed, NULL, NULL);
+                input = utf8_cmd_input;
+            }
+        }
+        LocalFree(wargv);
+    }
+#endif
+
     const char *catalog = (argc >= 3) ? argv[2] : "data/products.csv";
 
     // If input is a file that exists, read its contents; otherwise treat as raw text
@@ -63,5 +90,6 @@ int main(int argc, char **argv) {
 
     sm_destroy_context(c);
     free(text_content);
+    if (utf8_cmd_input) free(utf8_cmd_input);
     return 0;
 }

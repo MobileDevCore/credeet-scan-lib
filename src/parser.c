@@ -202,6 +202,22 @@ int sm_parse_line(const char *line, SM_ListItem *out) {
         sm_trim(out->product_text);
     }
 
+    /* Strip leading Indic postpositions after quantity (e.g. "10 રૂ. ની ધાણાદાળ" -> "ધાણાદાળ") */
+    if (out->has_quantity) {
+        static const char *prefixes[] = {
+            "ની ", "ના ", "નું ", "વાળા ", "વાળી ", "વાળુ ", "વાળું ", "કા ", "की ", "के "
+        };
+        for (size_t i = 0; i < sizeof(prefixes) / sizeof(prefixes[0]); i++) {
+            size_t plen = strlen(prefixes[i]);
+            if (strncmp(out->product_text, prefixes[i], plen) == 0) {
+                memmove(out->product_text, out->product_text + plen, strlen(out->product_text + plen) + 1);
+                sm_trim(out->product_text);
+                L = strlen(out->product_text);
+                break;
+            }
+        }
+    }
+
     /* Pattern 2: Trailing multiplier (e.g. "Soap x 4" -> quantity: 4, unit: "piece") */
     for (size_t i = L; i > 0; i--) {
         if (out->product_text[i - 1] == 'x' || out->product_text[i - 1] == 'X') {

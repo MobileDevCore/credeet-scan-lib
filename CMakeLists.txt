@@ -22,6 +22,18 @@ set_target_properties(scanmatch PROPERTIES
     PREFIX "lib"
 )
 
+# Size optimization flags: remove dead code, unused sections, and strip symbols
+target_compile_options(scanmatch PRIVATE
+    -Os
+    -ffunction-sections
+    -fdata-sections
+    -fno-asynchronous-unwind-tables
+)
+target_link_options(scanmatch PRIVATE
+    -Wl,--gc-sections
+    -Wl,-s
+)
+
 # On Windows/MinGW, export symbols
 if(WIN32)
     set_target_properties(scanmatch PROPERTIES
